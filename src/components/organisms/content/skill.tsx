@@ -19,17 +19,17 @@ type Props = {
 const currentColor = (text: string) => {
   switch (text) {
     case "C#":
-      return "text-violet-400";
-    case "Javascript":
-      return "text-yellow-400";
+      return "text-violet-500";
+    case "JavaScript":
+      return "text-yellow-500";
     case "React":
-      return "text-sky-400";
+      return "text-sky-500";
     case "HTML & CSS":
-      return "text-orange-400";
+      return "text-orange-500";
     case "Can Read":
-      return "text-indigo-400";
+      return "text-indigo-500";
     case "Other Skills":
-      return "text-lime-400";
+      return "text-lime-500";
     default:
       return false;
   }

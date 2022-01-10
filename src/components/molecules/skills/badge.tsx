@@ -19,7 +19,7 @@ const Badge = ({ id, icon, color, power }: Props) => {
 
   useEffect(() => {
     tippy("#" + id, {
-      content: id,
+      content: id?.replace("b_", ""),
     });
   }, []);
   return (
