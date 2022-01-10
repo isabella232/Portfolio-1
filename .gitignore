@@ -1,0 +1,8 @@
+node_modules
+.next
+.vscode
+yarn.lock
+*.log
+package-lock.json
+next-env.d.ts
+.env.local

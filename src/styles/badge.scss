@@ -1,0 +1,88 @@
+.badge {
+  margin: 1rem 1rem;
+  width: 6.4em;
+  height: 6.4em;
+  border-radius: 20%;
+  display: inline-block;
+  top: 0;
+  transition: all 0.2s ease;
+  box-shadow: 8px 10px 12px 3px rgba(0, 0, 0, 0.43);
+  position: relative;
+  overflow: hidden;
+  .liquid {
+    position: absolute;
+    bottom: -50%;
+    left: -20%;
+    height: 200%;
+    width: 150%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 40%;
+  }
+}
+
+.badgeRounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background: white;
+  position: absolute;
+  margin: 15px 16px auto;
+  z-index: 10;
+  border-radius: 30%;
+  box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.23);
+}
+
+.violet {
+  @apply text-violet-700 bg-violet-700;
+}
+.violet_d {
+  @apply text-violet-900 bg-violet-900;
+}
+.pink {
+  @apply text-pink-400 bg-pink-400;
+}
+.cyan {
+  @apply text-cyan-500 bg-cyan-500;
+}
+.sky {
+  @apply text-sky-500 bg-sky-500;
+}
+.blue {
+  @apply text-blue-500 bg-blue-500;
+}
+.green {
+  @apply text-green-600 bg-green-600;
+}
+.nodejs {
+  @apply text-slate-600 bg-green-600;
+}
+.yellow {
+  @apply text-yellow-500 bg-yellow-500;
+}
+.electron {
+  @apply text-sky-500 bg-slate-700;
+}
+.black {
+  @apply text-black bg-black;
+}
+.python {
+  @apply text-yellow-300 bg-blue-500;
+}
+.red {
+  @apply text-red-500 bg-red-500;
+}
+.php {
+  @apply text-indigo-400 bg-indigo-400;
+}
+.neovim {
+  @apply text-gray-500 bg-gradient-to-r from-green-500 to-blue-800;
+}
+.rider {
+  @apply text-black bg-gradient-to-r from-amber-500 via-pink-500 to-blue-600;
+}
+.framer {
+  @apply text-black bg-gradient-to-r from-pink-500 to-indigo-500;
+}
