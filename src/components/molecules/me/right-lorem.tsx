@@ -3,18 +3,17 @@ import H2P from "@/components/atoms/h2p";
 import React from "react";
 
 interface Props {
-  icon: CallableFunction;
-  color?: string;
+  icon: string;
   h2: string;
   children?: React.ReactNode;
   id?: number;
 }
 
-const RightLorem = ({ h2, children, icon, color }: Props) => {
+const RightLorem = ({ h2, children, icon }: Props) => {
   return (
     <>
       <H2P h2={h2} children={children} />
-      <BigIcon icon={icon} color={color} right={true} />
+      <BigIcon icon={icon} isRight={true} />
     </>
   );
 };

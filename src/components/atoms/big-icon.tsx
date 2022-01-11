@@ -1,9 +1,12 @@
+import SVG from "@/atoms/svg";
 import { motion, Variants } from "framer-motion";
 import React from "react";
+import { DiDotnet } from "react-icons/di";
+import { FcEngineering } from "react-icons/fc";
+import { SiCplusplus, SiCsharp, SiDotnet, SiElectron } from "react-icons/si";
 type Props = {
-  icon: CallableFunction;
-  color?: string | null;
-  right?: boolean;
+  icon: string;
+  isRight?: boolean;
 };
 
 const variants: Variants = {
@@ -13,10 +16,57 @@ const variants: Variants = {
   },
 };
 
-const BigIcon = ({ icon, color, right = false }: Props) => {
+const setIcon = (icon: string) => {
+  switch (icon) {
+    case "DiDotnet":
+      return (
+        <div
+          className={"text-5xl sm:text-7xl text-violet-700 hover:text-blue-600"}
+        >
+          <DiDotnet />
+        </div>
+      );
+    case "SiDotnet":
+      return (
+        <div
+          className={"text-5xl sm:text-7xl text-violet-700 hover:text-blue-600"}
+        >
+          <SiDotnet />
+        </div>
+      );
+    case "SiCsharp":
+      return (
+        <div className={"text-5xl sm:text-7xl text-violet-600"}>
+          <SiCsharp />
+        </div>
+      );
+    case "SiElectron":
+      return (
+        <div className={"text-5xl sm:text-7xl text-teal-500"}>
+          <SiElectron />
+        </div>
+      );
+    case "SiCplusplus":
+      return (
+        <div className={"text-5xl sm:text-7xl text-blue-600"}>
+          <SiCplusplus />
+        </div>
+      );
+    case "FcEngineering":
+      return (
+        <div className={"text-5xl sm:text-7xl"}>
+          <FcEngineering />
+        </div>
+      );
+    default:
+      return SVG.scissors;
+  }
+};
+
+const BigIcon = ({ icon, isRight = false }: Props) => {
   const rightClasses = "sm:order-none order-first sm:ml-10";
   const leftClass = "sm:mr-10";
-  let iconNode = icon();
+  let iconNode = setIcon(icon);
   return (
     <motion.div
       whileHover="hover"
@@ -24,10 +74,10 @@ const BigIcon = ({ icon, color, right = false }: Props) => {
       variants={variants}
       className={
         "sm:w-32 sm:h-32 h-20 w-20 inline-flex items-center justify-center rounded-full bg-indigo-200 dark:bg-gray-800 flex-shrink-0 " +
-        (right ? rightClasses : leftClass)
+        (isRight ? rightClasses : leftClass)
       }
     >
-      <div className={"text-5xl sm:text-7xl " + color}>{iconNode}</div>
+      {iconNode}
     </motion.div>
   );
 };

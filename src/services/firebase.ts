@@ -1,4 +1,5 @@
-import ISkills from "@/models/skills";
+import ILorem from "@/models/lorem";
+import ISkill from "@/models/skill";
 import { initializeApp } from "firebase/app";
 import {
   collection,
@@ -6,7 +7,6 @@ import {
   DocumentData,
   getFirestore,
 } from "firebase/firestore";
-import { getPerformance } from "firebase/performance";
 const app = initializeApp({
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -17,9 +17,9 @@ const app = initializeApp({
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 });
 const firestore = getFirestore(app);
-const perf = getPerformance(app);
 const createCollection = <T = DocumentData>(collectionName: string) => {
   return collection(firestore, collectionName) as CollectionReference<T>;
 };
 
-export const SkillsCol = createCollection<ISkills>("Skills");
+export const SkillsCol = createCollection<ISkill>("Skills");
+export const LoremsCol = createCollection<ILorem>("Lorems");

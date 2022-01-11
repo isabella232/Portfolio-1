@@ -6,3 +6,7 @@ yarn.lock
 package-lock.json
 next-env.d.ts
 .env.local
+out
+.github
+.firebase*
+firebase*

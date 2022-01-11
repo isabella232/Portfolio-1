@@ -4,12 +4,12 @@ import { motion, Variants } from "framer-motion";
 import React, { useEffect } from "react";
 import tippy from "tippy.js";
 export interface Props {
-  icon: CallableFunction;
+  icon: string;
   color?: string;
   h2: string;
   p: string[] | string;
   children?: React.ReactNode;
-  id?: number;
+  id: number;
 }
 
 const item: Variants = {
@@ -60,9 +60,9 @@ const Lorem = ({ id, h2, p, color, icon, children }: Props) => {
       }
     >
       {isEven ? (
-        <RightLorem h2={h2} children={children} icon={icon} color={color} />
+        <RightLorem h2={h2} children={children} icon={icon} />
       ) : (
-        <LeftLorem h2={h2} children={children} icon={icon} color={color} />
+        <LeftLorem h2={h2} children={children} icon={icon} />
       )}
     </motion.div>
   );

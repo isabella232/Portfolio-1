@@ -1,9 +1,12 @@
+import Loader from "@/components/atoms/loader";
 import Lorem from "@/components/organisms/content/lorem";
-import LoremsData from "@/data/Lorems";
+import ILorem from "@/models/lorem";
+import { LoremsCol } from "@/services/firebase";
 import typingcarousel from "@/services/typingcarousel";
+import { getDocs } from "firebase/firestore";
 import { motion, Variants } from "framer-motion";
 import Head from "next/head";
-import React, { RefObject, useEffect, useRef } from "react";
+import React, { RefObject, useEffect, useRef, useState } from "react";
 
 const page: Variants = {
   hidden: { opacity: 0, y: -20 },
@@ -24,6 +27,14 @@ const container: Variants = {
   },
 };
 const Me = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [lorems, setLorems] = useState<ILorem[]>([]);
+  useEffect(() => {
+    readLorems().then((data) => {
+      setLorems(data);
+      setIsLoading(false);
+    });
+  }, []);
   const headerRef = useRef<HTMLHeadingElement>();
   useEffect(() => {
     setTimeout(() => {
@@ -47,27 +58,37 @@ const Me = () => {
       <motion.div
         variants={container}
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
+        animate="show"
         className="container px-5 mx-auto"
       >
-        {LoremsData.map((lorem) => {
-          let descriptionText = lorem.body.split(". ");
-
-          return (
-            <Lorem
-              key={lorem.key}
-              id={lorem.key}
-              icon={lorem.icon}
-              h2={lorem.head}
-              p={descriptionText}
-              color={lorem.color}
-            />
-          );
-        })}
+        {isLoading && <Loader />}
+        {!isLoading &&
+          lorems
+            .sort((a, b) => a.Id - b.Id)
+            .map((lorem) => {
+              let descriptionText = lorem.body.split(". ");
+              return (
+                <Lorem
+                  key={lorem.Id}
+                  id={lorem.Id}
+                  icon={lorem.icon}
+                  h2={lorem.head}
+                  p={descriptionText}
+                />
+              );
+            })}
       </motion.div>
     </motion.section>
   );
+};
+
+const readLorems = async () => {
+  const loremsSnapshot = await getDocs(LoremsCol);
+  let lorems: ILorem[] = [];
+  loremsSnapshot.docs.forEach((loremDoc) => {
+    lorems.push(loremDoc.data());
+  });
+  return lorems;
 };
 
 export default Me;
