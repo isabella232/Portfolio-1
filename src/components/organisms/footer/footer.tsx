@@ -11,7 +11,7 @@ const Footer = () => {
   const router = useRouter();
 
   return (
-    <footer className="flex-shrink-0 dark:text-gray-400 bg-indigo-800 dark:bg-gray-800">
+    <footer className="flex-shrink-0 z-30 dark:text-gray-400 bg-indigo-800 dark:bg-gray-800">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex font-medium items-center justify-center text-white">
           <span>Beta : 0.1.0</span>

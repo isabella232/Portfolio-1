@@ -1,6 +1,7 @@
 import Layout from "@/layouts/layout";
 import "@/styles/badge.scss";
 import "@/styles/darkmode-btn.scss";
+import "@/styles/ghibli.scss";
 import "@/styles/global.scss";
 import "@/styles/howtodeck.scss";
 import "@/styles/liquid-btn.scss";
