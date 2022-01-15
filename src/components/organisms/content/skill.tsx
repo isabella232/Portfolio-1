@@ -44,7 +44,6 @@ const Skill = ({ id, text, children, isHowTo, setActiveSkill }: Props) => {
 
     if (!isHowTo && typeof setActiveSkill !== "undefined") {
       setActiveSkill(id);
-      console.log(id);
     }
     const e = document.getElementById(id) as Element;
     const elementsBelow = getElementsBelow(e, ".skill");

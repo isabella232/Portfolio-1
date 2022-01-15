@@ -1,13 +1,12 @@
 import Post from "@/models/post";
-
 import fs from "fs";
-import React from "react";
 import matter from "gray-matter";
+import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import {
-  materialDark,
   dracula,
+  materialDark,
   vscDarkPlus,
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
@@ -50,7 +49,6 @@ export async function getStaticProps({
     .readFileSync(`${process.cwd()}/src/data/blogs/${slug}.md`)
     .toString();
   const { data, content } = matter(file);
-  console.log(data);
   return {
     props: {
       slug,

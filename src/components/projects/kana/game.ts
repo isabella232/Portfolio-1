@@ -96,10 +96,6 @@ function setEventsListener() {
     btnSettings = document.getElementById("btnSettings"),
     modal = document.getElementById("settings");
   if (btnA && btnB && btnC && btnD && btnSettings) {
-    console.log(btnA.classList.add("flat-button"));
-    console.log(btnB.classList.add("flat-button"));
-    console.log(btnC.classList.add("flat-button"));
-    console.log(btnD.classList.add("flat-button"));
     btnSettings.addEventListener("click", () => {
       if (modal) {
         modal.style.display = "block";
