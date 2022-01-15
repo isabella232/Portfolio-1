@@ -29,7 +29,12 @@ const item: Variants = {
 
 const Contact = () => {
   return (
-    <motion.section variants={page} initial={"hidden"} animate={"show"}>
+    <motion.section
+      variants={page}
+      initial={"hidden"}
+      animate={"show"}
+      className="container mx-auto"
+    >
       <Head>
         <title>Contact</title>
       </Head>

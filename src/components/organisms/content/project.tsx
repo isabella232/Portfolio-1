@@ -34,10 +34,7 @@ const Project = ({ children, project }: Props) => {
     }
   }, [isBlurred]);
   return (
-    <motion.div
-      variants={item}
-      className={project.key === 4 ? "group" : "group border-b border-gray-800"}
-    >
+    <motion.div variants={item}>
       <div className="shadow-xl flex flex-col lg:flex-row my-8 mx-auto sm:w-max bg-gray-800 rounded-2xl">
         <div className="">
           <div className="p-7 -mt-4">
@@ -74,7 +71,7 @@ const Project = ({ children, project }: Props) => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center p-6">
+        <div className="flex items-center justify-center pt-6 ">
           {!condition && (
             <Blur isBlurred={isBlurred} setIsBlurred={setIsBlurred}>
               {children}
@@ -82,23 +79,19 @@ const Project = ({ children, project }: Props) => {
           )}
           {condition && children}
         </div>
-      </div>
-      <div className="flex flex-col justify-center items-center my-4 relative">
-        <p className="text-center font-semibold m-4 group-hover:text-indigo-600 group-hover:scale-105 duration-300">
-          Download / Clone :
-        </p>
-        <motion.a
-          whileHover={{
-            scale: 1.2,
-            rotateZ: 360,
-          }}
-          className="bg-gray-800 rounded-full w-min text-5xl p-4 cursor-pointer"
-          href={project.link.h}
-          target="_blank"
-          rel="noopener"
-        >
-          {project.link.i()}
-        </motion.a>
+        <div className="flex flex-col items-center justify-center p-2 group">
+          <p className="text-center font-semibold m-4 group-hover:text-indigo-600 group-hover:scale-105 duration-300">
+            Download / Clone :
+          </p>
+          <a
+            className="bg-gray-900 rounded-full w-min text-5xl p-4 cursor-pointer"
+            href={project.link.h}
+            target="_blank"
+            rel="noopener"
+          >
+            {project.link.i()}
+          </a>
+        </div>
       </div>
     </motion.div>
   );

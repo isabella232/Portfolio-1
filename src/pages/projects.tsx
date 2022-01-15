@@ -29,7 +29,7 @@ const Projects = () => {
       variants={page}
       initial={"hidden"}
       animate={"show"}
-      className="container px-5 mx-auto text-white"
+      className="container mx-auto text-white"
     >
       <Head>
         <title>Projects</title>

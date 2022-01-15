@@ -1,7 +1,7 @@
 import Header from "@/components/atoms/header";
 import Loader from "@/components/atoms/loader";
 import Badges from "@/components/organisms/content/Badges";
-import ISkills from "@/models/skills";
+import ISkills from "@/models/skill";
 import SmallSkillBadge from "@/molecules/skills/small-skill-badge";
 import Skill from "@/organisms/content/skill";
 import { SkillsCol } from "@/services/firebase";
@@ -34,7 +34,7 @@ const Skills = () => {
       variants={variants}
       initial={"hidden"}
       animate={"show"}
-      className="container mx-auto dark:text-gray-600 dark:bg-gray-900"
+      className="container mx-auto"
     >
       <Head>
         <title>Skills</title>

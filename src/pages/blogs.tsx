@@ -21,12 +21,17 @@ const variants: Variants = {
 const Index = ({ blogs }: Props) => {
   blogs.sort((a, b) => b.frontmatter.updatedAt - a.frontmatter.updatedAt);
   return (
-    <motion.section variants={variants} initial={"hidden"} animate={"show"}>
+    <motion.section
+      variants={variants}
+      initial={"hidden"}
+      animate={"show"}
+      className="container mx-auto"
+    >
       <Head>
         <title>Blogs</title>
       </Head>
       <Header text="Blogs" />
-      <div className="container mx-auto flex flex-row flex-wrap justify-center">
+      <div className="flex flex-row flex-wrap justify-center">
         {blogs.map((blog) => {
           let tags: String | undefined = blog.frontmatter.tags;
           let array: string[] | undefined = tags?.split(",");
