@@ -10,9 +10,9 @@ import Head from "next/head";
 import React, { useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
 import { RiArticleLine } from "react-icons/ri";
-import { SiNextdotjs, SiReact, SiVercel } from "react-icons/si";
+import { SiFirebase, SiNextdotjs, SiReact, SiVercel } from "react-icons/si";
 import tippy from "tippy.js";
-let scissors: CallableFunction = () => SVG.scissors;
+
 let element: React.ReactNode = (
   <>
     <p>
@@ -46,14 +46,14 @@ const HowTo = () => {
       variants={page}
       initial={"hidden"}
       animate={"show"}
-      className="container px-5 mx-auto text-center text-white"
+      className="container mx-auto text-white"
     >
       <Head>
         <title>Credits</title>
       </Head>
       <Header text="How to" />
-      <div className="mb-8 p-8 bg-gray-800 shadow-xl hover:scale-105 duration-300 rounded-xl">
-        <div className="flex text-8xl justify-evenly m-5">
+      <div className="m-8 p-8 bg-gray-800 shadow-xl hover:scale-105 duration-300 rounded-xl">
+        <div className="flex text-8xl justify-evenly m-5 text-center">
           <div
             className="text-cyan-600 p-2"
             data-tippy-content="npx create-react-app my-app"
@@ -67,6 +67,13 @@ const HowTo = () => {
           >
             <SiNextdotjs />
             <p className="text-sm font-bold text-white mt-2">Next</p>
+          </div>
+          <div
+            className="text-yellow-400 p-2"
+            data-tippy-content="npx create-next-app nextjs-app"
+          >
+            <SiFirebase />
+            <p className="text-sm font-bold text-white mt-2">Firebase</p>
           </div>
           <div className="text-black p-2">
             <SiVercel />
@@ -107,7 +114,7 @@ const HowTo = () => {
               <RightLorem
                 h2="The Catalyzer"
                 children={element}
-                icon={scissors}
+                icon={"scissors"}
               />
             </div>
           </Card>
@@ -377,9 +384,10 @@ const HowTo = () => {
           </Card>
         </div>
       </div>
-      <div className="m-2">
+      <div className="m-2 text-center">
         <a
-          className="text-xl font-semibold text-center text-white hover:text-indigo-500"
+          className="text-xl font-semibold text-white hover:text-indigo-500
+          "
           href="https://codepen.io/laijoann/pen/yLeKmVK"
         >
           Codepen.io
