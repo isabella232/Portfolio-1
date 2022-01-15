@@ -5,7 +5,7 @@ const IndexSkills = () => {
   return (
     <div className="text-lg text-indigo-500">
       <p className="mb-4 font-bold tracking-widest uppercase">Skills</p>
-      <div className="sm:flex items-start justify-around mb-10">
+      <div className="flex flex-col md:flex-row items-start justify-around mb-10">
         <ul className="flex flex-col">
           <li className="flex">
             <span className="mr-1">
@@ -104,16 +104,11 @@ const IndexSkills = () => {
       <div className="liquid-btn inline-flex rounded-lg">
         <Link href="/skills">
           <a className="rounded-lg">
-            <span className="relative z-10 text-white">Skills in Details</span>
+            <span className="relative z-10 text-white">Read More</span>
             <div className="wave bg-indigo-700"></div>
           </a>
         </Link>
       </div>
-      {/* <Link href="/skills">
-        <a className="inline-flex active:scale-90 hover:scale-105 items-center h-12 px-6 m-2 font-semibold text-white transition duration-300 rounded shadow-md bg-indigo-500 hover:bg-indigo-700">
-          Skills in Details
-        </a>
-      </Link> */}
     </div>
   );
 };

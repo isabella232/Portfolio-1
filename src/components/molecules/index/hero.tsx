@@ -4,7 +4,7 @@ import { GiBrain } from "react-icons/gi";
 const Hero = () => {
   return (
     <>
-      <div className="mb-6 sm:mx-auto flex items-center justify-center w-12 h-12 rounded-full bg-indigo-500">
+      <div className="mb-6 mx-auto flex items-center justify-center w-12 h-12 rounded-full bg-indigo-500">
         <GiBrain className="w-7 h-7 text-gray-200" />
       </div>
       <div className="mb-10 md:mb-12">
