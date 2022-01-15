@@ -33,7 +33,7 @@ type Props = {
   activeBages: string;
 };
 
-const containerBages: Variants = {
+const badgesContainer: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -45,7 +45,7 @@ const Badges = ({ activeBages }: Props) => {
     <>
       {activeBages === "Dotnet" && (
         <motion.div
-          variants={containerBages}
+          variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
           className="flex justify-center scale-75 xl:scale-100"
@@ -91,7 +91,7 @@ const Badges = ({ activeBages }: Props) => {
       )}
       {activeBages === "JS" && (
         <motion.div
-          variants={containerBages}
+          variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
           className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
@@ -130,7 +130,7 @@ const Badges = ({ activeBages }: Props) => {
       )}
       {activeBages === "React" && (
         <motion.div
-          variants={containerBages}
+          variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
           className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
@@ -157,7 +157,7 @@ const Badges = ({ activeBages }: Props) => {
       )}
       {activeBages === "HTML" && (
         <motion.div
-          variants={containerBages}
+          variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
           className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
@@ -196,7 +196,7 @@ const Badges = ({ activeBages }: Props) => {
       )}
       {activeBages === "Read" && (
         <motion.div
-          variants={containerBages}
+          variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
           className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
@@ -230,7 +230,7 @@ const Badges = ({ activeBages }: Props) => {
       )}
       {activeBages === "Other" && (
         <motion.div
-          variants={containerBages}
+          variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
           className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"

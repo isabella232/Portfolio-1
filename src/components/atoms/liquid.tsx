@@ -1,8 +1,10 @@
 import { motion, useCycle, Variants } from "framer-motion";
 import React from "react";
+
 type Props = {
   power: string;
 };
+
 const setPower = (power: string) => {
   switch (power) {
     case "full":
@@ -10,11 +12,11 @@ const setPower = (power: string) => {
     case "almost":
       return "-60%";
     case "half":
-      return "-40%";
+      return "-45%";
     case "low":
-      return "-30%";
+      return "-35%";
     case "lowest":
-      return "-20%";
+      return "-25%";
   }
 };
 
@@ -23,39 +25,58 @@ const Liquid = ({ power }: Props) => {
     initial: {
       rotate: 0,
     },
-    fill: {
+    fillWave: {
       translateY: setPower(power),
-      rotate: [0, 45, 90, 180, 270, 360],
+      rotate: 360,
       transition: {
-        delay: Math.random(),
+        ease: "easeOut",
         duration: 3,
+      },
+    },
+    rotateWave5: {
+      translateY: setPower(power),
+      rotate: [0, 360],
+      transition: {
+        repeat: Infinity,
+        duration: 5,
         ease: "linear",
       },
     },
-    rotate: {
+    rotateWave10: {
       translateY: setPower(power),
-      rotate: [0, 45, 90, 180, 270, 360],
+      rotate: [0, 360],
       transition: {
         repeat: Infinity,
-        duration: 4,
+        duration: 10,
         ease: "linear",
       },
     },
   };
-  const [animation, cycleAnimation] = useCycle("fill", "rotate");
+  const [waveF, cycleWaveF] = useCycle("fillWave", "rotateWave5");
+  const [waveB, cycleWaveB] = useCycle("fillWave", "rotateWave10");
   const handleAnimationComplete = () => {
-    if (animation !== "rotate") {
-      cycleAnimation();
+    if (waveF === "fillWave" && waveB === "fillWave") {
+      cycleWaveF();
+      cycleWaveB();
     }
   };
   return (
-    <motion.div
-      variants={liquid}
-      onAnimationComplete={handleAnimationComplete}
-      initial={"initial"}
-      animate={animation}
-      className="liquid"
-    ></motion.div>
+    <div className="liquid">
+      <motion.div
+        onAnimationComplete={handleAnimationComplete}
+        variants={liquid}
+        initial={"initial"}
+        animate={waveF}
+        className="waveF"
+      ></motion.div>
+      <motion.div
+        onAnimationComplete={handleAnimationComplete}
+        variants={liquid}
+        initial={"initial"}
+        animate={waveB}
+        className="waveB"
+      ></motion.div>
+    </div>
   );
 };
 
