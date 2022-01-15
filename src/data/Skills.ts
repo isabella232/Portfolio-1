@@ -1,4 +1,4 @@
-import ISkills from "@/models/skills";
+import ISkills from "@/models/skill";
 
 const SkillsData: ISkills[] = [
   {

@@ -19,9 +19,9 @@ const Navbar = () => {
   }, [isDark]);
 
   return (
-    <header className="flex-shrink-0">
+    <header className="flex-shrink-0 z-30">
       {/* Menu*/}
-      <nav className="px-4 pt-4 flex justify-between bg-indigo-600 dark:bg-gray-900">
+      <nav className="px-4 flex justify-between bg-indigo-600 dark:bg-gray-900">
         <Link classname="text-3xl font-bold leading-none md:hidden" href="/">
           {"H97"}
         </Link>
