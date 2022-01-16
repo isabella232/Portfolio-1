@@ -1,4 +1,4 @@
-import Ghibli from "@/molecules/ghibli";
+import Ghibli from "@/components/molecules/ghibli/ghibli";
 import Footer from "@/organisms/footer/footer";
 import Navbar from "@/organisms/navbar/navbar";
 import React from "react";

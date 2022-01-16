@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 type Props = {
-  id: string;
+  Id: string;
   text: string;
   children?: React.ReactNode;
   isHowTo?: boolean;
@@ -35,7 +35,7 @@ const currentColor = (text: string) => {
   }
 };
 
-const Skill = ({ id, text, children, isHowTo, setActiveSkill }: Props) => {
+const Skill = ({ Id, text, children, isHowTo, setActiveSkill }: Props) => {
   const color = currentColor(text);
   const [isBeingHovered, setIsBeingHovered] = useState(false);
 
@@ -43,9 +43,9 @@ const Skill = ({ id, text, children, isHowTo, setActiveSkill }: Props) => {
     setIsBeingHovered(true);
 
     if (!isHowTo && typeof setActiveSkill !== "undefined") {
-      setActiveSkill(id);
+      setActiveSkill(Id);
     }
-    const e = document.getElementById(id) as Element;
+    const e = document.getElementById(Id) as Element;
     const elementsBelow = getElementsBelow(e, ".skill");
     if (!isBeingHovered) {
       hideElementsBelow(elementsBelow);
@@ -60,7 +60,7 @@ const Skill = ({ id, text, children, isHowTo, setActiveSkill }: Props) => {
 
   return (
     <motion.div
-      id={id}
+      id={Id}
       className={
         isHowTo
           ? "p-2 w-full cursor-pointer skill"

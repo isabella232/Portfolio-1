@@ -54,38 +54,38 @@ const Badges = ({ activeBages }: Props) => {
             icon={<SiDotnet className="text-5xl" />}
             color="violet"
             power={"full"}
-            id={"b_Dotnet"}
+            Id={"b_Dotnet"}
           />
           <Badge
             icon={<SiCsharp className="text-5xl" />}
             color="violet_d"
             power={"full"}
-            id={"b_C_Sharp"}
+            Id={"b_C_Sharp"}
           />
           <Badge
             icon={<SiRider className="text-5xl" />}
             color="rider"
             power={"half"}
-            id={"b_Rider"}
+            Id={"b_Rider"}
           />
 
           <Badge
             icon={<SiBlazor className="text-5xl" />}
             color="violet_d"
             power={"almost"}
-            id={"b_Blazor"}
+            Id={"b_Blazor"}
           />
           <Badge
             icon={<SiMongodb className="text-5xl" />}
             color="green"
             power={"half"}
-            id={"b_Mongo"}
+            Id={"b_Mongo"}
           />
           <Badge
             icon={<FaDocker className="text-5xl" />}
             color="sky"
             power={"low"}
-            id={"b_Docker"}
+            Id={"b_Docker"}
           />
         </motion.div>
       )}
@@ -100,31 +100,31 @@ const Badges = ({ activeBages }: Props) => {
             icon={<SiJavascript className="text-5xl" />}
             color="yellow"
             power={"full"}
-            id={"b_JavaScript"}
+            Id={"b_JavaScript"}
           />
           <Badge
             icon={<SiTypescript className="text-5xl" />}
             color="blue"
             power={"half"}
-            id={"b_TypeScript"}
+            Id={"b_TypeScript"}
           />
           <Badge
             icon={<FaNode className="text-5xl" />}
             color="nodejs"
             power={"almost"}
-            id={"b_Node"}
+            Id={"b_Node"}
           />
           <Badge
             icon={<SiElectron className="text-5xl" />}
             color="electron"
             power={"almost"}
-            id={"b_Electron"}
+            Id={"b_Electron"}
           />
           <Badge
             icon={<SiJquery className="text-5xl" />}
             color="blue"
             power={"half"}
-            id={"b_JQuery"}
+            Id={"b_JQuery"}
           />
         </motion.div>
       )}
@@ -139,19 +139,19 @@ const Badges = ({ activeBages }: Props) => {
             icon={<SiReact className="text-5xl" />}
             color="cyan"
             power={"almost"}
-            id={"b_React"}
+            Id={"b_React"}
           />
           <Badge
             icon={<SiNextdotjs className="text-5xl" />}
             color="black"
             power={"half"}
-            id={"b_Next"}
+            Id={"b_Next"}
           />
           <Badge
             icon={<SiFramer className="text-5xl" />}
             color="framer"
             power={"half"}
-            id={"b_Framer_Motion"}
+            Id={"b_Framer_Motion"}
           />
         </motion.div>
       )}
@@ -166,31 +166,31 @@ const Badges = ({ activeBages }: Props) => {
             icon={<SiHtml5 className="text-5xl" />}
             color="orange"
             power={"full"}
-            id={"b_HTML"}
+            Id={"b_HTML"}
           />
           <Badge
             icon={<SiCss3 className="text-5xl" />}
             color="blue"
             power={"lowest"}
-            id={"b_CSS"}
+            Id={"b_CSS"}
           />
           <Badge
             icon={<SiTailwindcss className="text-5xl" />}
             color="cyan"
             power={"full"}
-            id={"b_Tailwind"}
+            Id={"b_Tailwind"}
           />
           <Badge
             icon={<SiBootstrap className="text-5xl" />}
             color="violet"
             power={"almost"}
-            id={"b_Bootsrap"}
+            Id={"b_Bootsrap"}
           />
           <Badge
             icon={<FaSass className="text-5xl" />}
             color="pink"
             power={"almost"}
-            id={"b_Sass"}
+            Id={"b_Sass"}
           />
         </motion.div>
       )}

@@ -17,28 +17,27 @@ const Settings = () => {
           Opacity :{" "}
         </label>
         <div id="opacity" className="opacity">
-          <Button id="25" />
-          <Button id="50" />
-          <Button id="75" />
-          <Button id="100" />
+          <Button Id="25" />
+          <Button Id="50" />
+          <Button Id="75" />
+          <Button Id="100" />
         </div>
         <div className="mode">
           <label htmlFor="hiragana-switcher">Hiragana (ひらがな) : </label>
-          <Checkbox id="hiragana-switcher" checked={isHChecked} />
+          <Checkbox Id="hiragana-switcher" checked={isHChecked} />
           <label htmlFor="katakana-switcher">Katakana (カタカナ) : </label>
-          <Checkbox id="katakana-switcher" checked={isKChecked} />
+          <Checkbox Id="katakana-switcher" checked={isKChecked} />
         </div>
-        {/* <div className="flaticon">Icons made from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */}
       </div>
     </div>
   );
 };
 
 export interface CheckboxProps {
-  id: string;
+  Id: string;
   checked: boolean;
 }
-const Checkbox = ({ id, checked }: CheckboxProps) => {
+const Checkbox = ({ Id, checked }: CheckboxProps) => {
   return (
     <div className="switch_box">
       <div className="input_wrapper">
@@ -46,9 +45,9 @@ const Checkbox = ({ id, checked }: CheckboxProps) => {
           disabled
           type="checkbox"
           className="switch_4"
-          id={id}
+          id={Id}
           defaultChecked={true}
-          checked={true}
+          checked={checked}
         />
         <svg
           className="is_checked"
@@ -74,17 +73,17 @@ const Checkbox = ({ id, checked }: CheckboxProps) => {
 };
 
 export interface ButtonProps {
-  id: string;
+  Id: string;
   hotkey?: string;
 }
-const Button = ({ id, hotkey }: ButtonProps) => {
+const Button = ({ Id, hotkey }: ButtonProps) => {
   var button = <div></div>;
   switch (hotkey) {
     case "up":
       button = (
         <div className="answer text-center">
           <div
-            id={id}
+            id={Id}
             className="up"
             onClick={(event: MouseEvent) => {
               updateScore(event);
@@ -97,7 +96,7 @@ const Button = ({ id, hotkey }: ButtonProps) => {
       button = (
         <div className="answer text-center">
           <div
-            id={id}
+            id={Id}
             className="down"
             onClick={(event: MouseEvent) => {
               updateScore(event);
@@ -110,7 +109,7 @@ const Button = ({ id, hotkey }: ButtonProps) => {
       button = (
         <div className="answer text-center">
           <div
-            id={id}
+            id={Id}
             className="right"
             onClick={(event: MouseEvent) => {
               updateScore(event);
@@ -123,7 +122,7 @@ const Button = ({ id, hotkey }: ButtonProps) => {
       button = (
         <div className="answer text-center">
           <div
-            id={id}
+            id={Id}
             className="left"
             onClick={(event: MouseEvent) => {
               updateScore(event);
@@ -134,8 +133,8 @@ const Button = ({ id, hotkey }: ButtonProps) => {
       break;
     default:
       button = (
-        <div id={id} className="flat-button text-center">
-          {id + "%"}
+        <div id={Id} className="flat-button text-center">
+          {Id + "%"}
         </div>
       );
       break;
@@ -146,7 +145,7 @@ const Button = ({ id, hotkey }: ButtonProps) => {
 // const ContextMenuTest = () => {
 //   return (
 //     <ContextMenu
-//       id="context-menu"
+//       Id="context-menu"
 //       appendTo=".main"
 //       animation="pop"
 //       hideOnLeave={false}
@@ -173,7 +172,7 @@ const TitleBar = () => {
   return (
     <div id="title-bar" className="title-bar">
       {/* Logo */}
-      <div className="text-xl text-center p-1 text-red-600">
+      <div className="text-xl text-center p-1 text-indigo-600">
         <GiJapan />
       </div>
       {/* Title */}
@@ -201,7 +200,7 @@ const Kana = () => {
     <div className="kana_trainer">
       <TitleBar />
       <div className="main">
-        {/* <ContextMenuTrigger id="context-menu"> */}
+        {/* <ContextMenuTrigger Id="context-menu"> */}
         <div>
           <i id="btnSettings" className="material-icons">
             settings
@@ -209,10 +208,10 @@ const Kana = () => {
         </div>
         <h1 className="text-center" id="Kana"></h1>
         <div className="answers">
-          <Button id="btnA" hotkey="up" />
-          <Button id="btnB" hotkey="down" />
-          <Button id="btnC" hotkey="left" />
-          <Button id="btnD" hotkey="right" />
+          <Button Id="btnA" hotkey="up" />
+          <Button Id="btnB" hotkey="down" />
+          <Button Id="btnC" hotkey="left" />
+          <Button Id="btnD" hotkey="right" />
         </div>
         {/* </ContextMenuTrigger> */}
         <Settings />

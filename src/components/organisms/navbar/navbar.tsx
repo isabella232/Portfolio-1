@@ -1,5 +1,5 @@
-import { Link } from "@/atoms/link-on-click";
-import DarkModeButton from "@/components/atoms/darkmode";
+import DarkModeButton from "@/components/atoms/navbar/darkmode";
+import { Link } from "@/components/atoms/shared/link-on-click";
 import HiddenMenu from "@/molecules/navbar/hidden-menu";
 import NavBarListLinks from "@/molecules/navbar/navbar-list-links";
 import { AnimatePresence } from "framer-motion";

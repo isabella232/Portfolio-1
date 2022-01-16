@@ -1,4 +1,4 @@
-import { Link } from "@/atoms/link-on-click";
+import { Link } from "@/components/atoms/shared/link-on-click";
 import React from "react";
 
 type Props = {

@@ -1,4 +1,4 @@
-import svg from "@/atoms/svg";
+import svg from "@/atoms/shared/svg";
 import { motion, Variants } from "framer-motion";
 import React from "react";
 

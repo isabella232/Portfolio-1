@@ -1,10 +1,10 @@
-import Liquid from "@/components/atoms/liquid";
+import Liquid from "@/components/atoms/skills/liquid";
 import { motion, Variants } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import tippy from "tippy.js";
 
 type Props = {
-  id?: string;
+  Id?: string;
   icon: React.ReactNode;
   color: string;
   power: "full" | "almost" | "half" | "low" | "lowest";
@@ -14,12 +14,12 @@ const variants: Variants = {
   show: { opacity: 1 },
 };
 
-const Badge = ({ id, icon, color, power }: Props) => {
+const Badge = ({ Id, icon, color, power }: Props) => {
   const [isBeingHovered, setIsBeingHovered] = useState(false);
 
   useEffect(() => {
-    tippy("#" + id, {
-      content: id?.replace("b_", "").replace("_", " "),
+    tippy("#" + Id, {
+      content: Id?.replace("b_", "").replace("_", " "),
     });
   }, []);
   return (
@@ -28,7 +28,7 @@ const Badge = ({ id, icon, color, power }: Props) => {
       onMouseOver={() => setIsBeingHovered(true)}
       exit={"exit"}
       className="flex flex-col items-center mx-2"
-      id={id}
+      id={Id}
     >
       <article className={"badge " + color}>
         <div className="badgeRounded">{icon}</div>

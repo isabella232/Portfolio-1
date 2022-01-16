@@ -1,4 +1,7 @@
 .loader {
+  display: inline-block;
+  margin: 0 16px;
+
   --path: #2f3545;
   --dot: #5628ee;
   --duration: 3s;
@@ -130,9 +133,4 @@
   100% {
     stroke-dashoffset: 275;
   }
-}
-
-.loader {
-  display: inline-block;
-  margin: 0 16px;
 }

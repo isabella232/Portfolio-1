@@ -1,14 +1,14 @@
-import { Link } from "@/atoms/link-on-click";
-import Underline from "@/components/atoms/underline";
+import Underline from "@/components/atoms/navbar/underline";
+import { Link } from "@/components/atoms/shared/link-on-click";
 import { NavBarLinkProps as Props } from "@/data/NavbarLinks";
 import React, { useState } from "react";
 
-const NavBarLink = ({ id, href, route, text }: Props) => {
+const NavBarLink = ({ Id, href, route, text }: Props) => {
   const [isBeingHovered, setIsBeingHovered] = useState(false);
 
   return (
     <li
-      key={id}
+      key={Id}
       onMouseEnter={() => setIsBeingHovered(true)}
       onMouseLeave={() => setIsBeingHovered(false)}
       className="group hover:text-white px-3"

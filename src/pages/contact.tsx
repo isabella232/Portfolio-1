@@ -1,4 +1,5 @@
-import Header from "@/components/atoms/header";
+import Contact from "@/components/atoms/contact";
+import Header from "@/components/atoms/shared/header";
 import { motion, Variants } from "framer-motion";
 import Head from "next/head";
 import React from "react";
@@ -22,12 +23,8 @@ const container: Variants = {
     },
   },
 };
-const item: Variants = {
-  hidden: { opacity: 0, x: 200 },
-  show: { opacity: 1, x: 0, transition: { ease: "easeInOut" } },
-};
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <motion.section
       variants={page}
@@ -45,49 +42,26 @@ const Contact = () => {
         animate="show"
         className="flex flex-col sm:flex-row sm:my-40 my-10 justify-evenly items-center text-6xl sm:text-7xl text-indigo-500"
       >
-        <motion.a
-          variants={item}
-          className="flex flex-col items-center m-2 sm:m-0"
-          href="mailto:arno.demarchi.8@gmail.com"
-        >
-          <MdAlternateEmail />
-          <span className="text-lg text-white">MailTo</span>
-        </motion.a>
-        <motion.a
-          variants={item}
-          className="flex flex-col items-center m-2 sm:m-0"
-          href="https://github.com/H97-Git/"
-        >
-          <GoMarkGithub />
-          <span className="text-lg text-white">GitHub</span>
-        </motion.a>
-        <motion.a
-          variants={item}
-          className="flex flex-col items-center m-2 sm:m-0"
-          href="https://www.linkedin.com/in/arno-demarchi-6aaa54151/"
-        >
-          <SiLinkedin />
-          <span className="text-lg text-white">LinkedIn</span>
-        </motion.a>
-        <motion.a
-          variants={item}
-          className="flex flex-col items-center m-2 sm:m-0"
-          href="https://www.linkedin.com/in/arno-demarchi-6aaa54151/"
-        >
-          <SiFacebook />
-          <span className="text-lg text-white">Facebook</span>
-        </motion.a>
-        <motion.a
-          variants={item}
-          className="flex flex-col items-center m-2 sm:m-0"
-          href="https://www.linkedin.com/in/arno-demarchi-6aaa54151/"
-        >
-          <SiTwitter />
-          <span className="text-lg text-white">Twitter</span>
-        </motion.a>
+        <Contact
+          icon={<MdAlternateEmail />}
+          href={"mailto:arno.demarchi.8@gmail.com"}
+          text={"MailTo"}
+        />
+        <Contact
+          icon={<GoMarkGithub />}
+          href={"https://github.com/H97-Git/"}
+          text={"GitHub"}
+        />
+        <Contact
+          icon={<SiLinkedin />}
+          href={"https://www.linkedin.com/in/arno-demarchi-6aaa54151/"}
+          text={"LinkedIn"}
+        />
+        <Contact icon={<SiFacebook />} href={""} text={"Facebook"} />
+        <Contact icon={<SiTwitter />} href={""} text={"Twitter"} />
       </motion.div>
     </motion.section>
   );
 };
 
-export default Contact;
+export default ContactPage;

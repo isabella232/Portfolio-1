@@ -8,8 +8,8 @@ const NavBarListLinks = () => {
 
   return (
     <ul className="md:flex md:items-start">
-      {NavBarData.map(({ id, text, href }: Props) => (
-        <NavBarLink id={id} text={text} href={href} route={router.pathname} />
+      {NavBarData.map(({ Id, text, href }: Props) => (
+        <NavBarLink Id={Id} text={text} href={href} route={router.pathname} />
       ))}
     </ul>
   );

@@ -2,25 +2,25 @@ import { motion, useCycle, Variants } from "framer-motion";
 import React from "react";
 
 type Props = {
-  power: string;
-};
-
-const setPower = (power: string) => {
-  switch (power) {
-    case "full":
-      return "-80%";
-    case "almost":
-      return "-60%";
-    case "half":
-      return "-45%";
-    case "low":
-      return "-35%";
-    case "lowest":
-      return "-25%";
-  }
+  power: "full" | "almost" | "half" | "low" | "lowest";
 };
 
 const Liquid = ({ power }: Props) => {
+  const setPower = (power: string) => {
+    switch (power) {
+      case "full":
+        return "-80%";
+      case "almost":
+        return "-60%";
+      case "half":
+        return "-45%";
+      case "low":
+        return "-35%";
+      case "lowest":
+        return "-25%";
+    }
+  };
+
   const liquid: Variants = {
     initial: {
       rotate: 0,
@@ -52,6 +52,7 @@ const Liquid = ({ power }: Props) => {
       },
     },
   };
+
   const [waveF, cycleWaveF] = useCycle("fillWave", "rotateWave5");
   const [waveB, cycleWaveB] = useCycle("fillWave", "rotateWave10");
   const handleAnimationComplete = () => {
@@ -60,6 +61,7 @@ const Liquid = ({ power }: Props) => {
       cycleWaveB();
     }
   };
+
   return (
     <div className="liquid">
       <motion.div

@@ -1,5 +1,5 @@
-import DarkModeButton from "@/components/atoms/darkmode";
-import HiddenMenuLink from "@/components/atoms/hidden-menu-link";
+import DarkModeButton from "@/components/atoms/navbar/darkmode";
+import HiddenMenuLink from "@/components/atoms/navbar/hidden-menu-link";
 import NavBarLinksData from "@/data/NavbarLinks";
 import React from "react";
 

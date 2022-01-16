@@ -1,4 +1,4 @@
-import Header from "@/components/atoms/header";
+import Header from "@/components/atoms/shared/header";
 import Carousel from "@/components/projects/openclassrooms/Carousel";
 import ProjectsData from "@/data/Projects";
 import Project from "@/organisms/content/project";
@@ -23,7 +23,7 @@ const container: Variants = {
     },
   },
 };
-const Projects = () => {
+const ProjectsPage = () => {
   return (
     <motion.section
       variants={page}
@@ -49,4 +49,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsPage;

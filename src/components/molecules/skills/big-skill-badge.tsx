@@ -1,5 +1,5 @@
+import svg from "@/atoms/shared/svg";
 import React from "react";
-import svg from "@/atoms/svg";
 
 type Props = {
   text: string;

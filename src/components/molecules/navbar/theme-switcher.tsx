@@ -1,4 +1,4 @@
-import SVG from "@/components/atoms/svg";
+import SVG from "@/components/atoms/shared/svg";
 import React from "react";
 
 const ThemeSwitcher = () => {

@@ -1,6 +1,6 @@
-import Header from "@/components/atoms/header";
-import Loader from "@/components/atoms/loader";
-import Badges from "@/components/organisms/content/Badges";
+import Header from "@/components/atoms/shared/header";
+import Loader from "@/components/atoms/shared/loader";
+import Badges from "@/components/organisms/content/badges";
 import ISkills from "@/models/skill";
 import SmallSkillBadge from "@/molecules/skills/small-skill-badge";
 import Skill from "@/organisms/content/skill";
@@ -19,7 +19,7 @@ const variants: Variants = {
   },
 };
 
-const Skills = () => {
+const SkillsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [skills, setSkills] = useState<ISkills[]>([]);
   const [activeBages, setActiveBadges] = useState("");
@@ -53,7 +53,7 @@ const Skills = () => {
                 <Skill
                   setActiveSkill={setActiveBadges}
                   key={skill.Id}
-                  id={skill.element_Id}
+                  Id={skill.element_Id}
                   text={skill.text}
                 >
                   {skill.details.map((detail, index) => {
@@ -86,4 +86,4 @@ const readSkills = async () => {
 //   } catch (err) {}
 // };
 
-export default Skills;
+export default SkillsPage;

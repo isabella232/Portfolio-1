@@ -1,4 +1,4 @@
-import SVG from "@/atoms/svg";
+import SVG from "@/atoms/shared/svg";
 import { motion, Variants } from "framer-motion";
 import React from "react";
 import { DiDotnet } from "react-icons/di";
@@ -63,7 +63,7 @@ const setIcon = (icon: string) => {
   }
 };
 
-const BigIcon = ({ icon, isRight = false }: Props) => {
+const BigIcon = ({ icon, isRight }: Props) => {
   const rightClasses = "sm:order-none order-first sm:ml-10";
   const leftClass = "sm:mr-10";
   let iconNode = setIcon(icon);

@@ -2,9 +2,9 @@ import { motion, Variants } from "framer-motion";
 import React from "react";
 
 type Props = {
+  Id: number;
   header: React.ReactNode;
   children: React.ReactNode;
-  id: number;
 };
 const setX = (key: number): number => {
   if (key % 2 === 0) {
@@ -12,9 +12,9 @@ const setX = (key: number): number => {
   }
   return -200;
 };
-const Card = ({ header, children, id }: Props) => {
+const Card = ({ header, children, Id }: Props) => {
   const item: Variants = {
-    hidden: { opacity: 0, x: setX(id) },
+    hidden: { opacity: 0, x: setX(Id) },
     show: {
       opacity: 1,
       x: 0,

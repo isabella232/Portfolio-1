@@ -11,7 +11,7 @@ const page: Variants = {
   },
 };
 
-const Home = () => {
+const HomePage = () => {
   useEffect(() => {}, []);
   return (
     <motion.section
@@ -29,4 +29,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

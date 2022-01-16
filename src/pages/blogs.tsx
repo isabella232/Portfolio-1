@@ -1,10 +1,10 @@
-import Header from "@/components/atoms/header";
+import Header from "@/components/atoms/shared/header";
+import Blog from "@/components/molecules/blogs/blog";
 import Post from "@/models/post";
 import { motion, Variants } from "framer-motion";
 import fs from "fs";
 import matter from "gray-matter";
 import Head from "next/head";
-import Link from "next/link";
 import React from "react";
 
 type Props = {
@@ -33,48 +33,12 @@ const Index = ({ blogs }: Props) => {
       <Header text="Blogs" />
       <div className="flex flex-row flex-wrap justify-center">
         {blogs.map((blog) => {
-          let tags: String | undefined = blog.frontmatter.tags;
-          let array: string[] | undefined = tags?.split(",");
-
           return (
-            <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-70 cursor-pointer m-5">
-              <Link href={`/blog/${blog.slug}`}>
-                <a>
-                  <img
-                    src="assets/img/pp.jpg"
-                    alt="blog photo"
-                    className="max-h-40 w-full object-cover"
-                  />
-                </a>
-              </Link>
-              <div className="bg-white dark:bg-gray-800 w-full p-4">
-                <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
-                  {blog.frontmatter.title}
-                </p>
-                <p className="text-gray-400 dark:text-gray-300 font-light text-md">
-                  {blog.frontmatter.description}
-                </p>
-                <motion.div
-                  drag="x"
-                  dragSnapToOrigin={true}
-                  dragConstraints={{
-                    top: 0,
-                    bottom: 0,
-                    left: -50,
-                    right: 50,
-                  }}
-                  className="flex justify-starts items-center mt-4"
-                >
-                  {array?.map((tag) => {
-                    return (
-                      <div className="text-xs m-2 py-1.5 px-4 text-gray-600 bg-blue-100 rounded-2xl">
-                        {tag}
-                      </div>
-                    );
-                  })}
-                </motion.div>
-              </div>
-            </div>
+            <Blog
+              content={blog.content}
+              slug={blog.slug}
+              frontmatter={blog.frontmatter}
+            />
           );
         })}
       </div>
