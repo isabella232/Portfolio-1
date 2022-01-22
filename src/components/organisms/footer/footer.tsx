@@ -11,14 +11,13 @@ const Footer = () => {
   const router = useRouter();
 
   return (
-    <footer className="flex-shrink-0 z-30 dark:text-gray-400 bg-indigo-800 dark:bg-gray-800">
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <footer className="flex-shrink-0 z-10 dark:text-gray-400 bg-indigo-800 dark:bg-gray-800">
+      <div className="container px-5 py-3 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex font-medium items-center justify-center text-white">
-          <span>Beta : 0.1.0</span>
           <span className="ml-3 text-xl">H97</span>
         </a>
         <p className="text-sm text-indigo-300 dark:text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:dark:border-gray-700 sm:border-indigo-500 sm:p-2 sm:mt-0 mt-3">
-          Copyright © 2021 - Arno Demarchi
+          Copyright © 2022 - Arno Demarchi
         </p>
         <span
           className={

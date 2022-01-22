@@ -42,7 +42,7 @@ const Lorems = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="container px-5 mx-auto"
+      className="container px-5 mx-auto "
     >
       {isLoading && <Loader />}
       {!isLoading &&
@@ -53,7 +53,7 @@ const Lorems = () => {
             return (
               <motion.div
                 variants={item}
-                className="flex items-center lg:w-3/5 mx-auto p-10 mb-10 sm:flex-row flex-col bg-gray-900 rounded-xl"
+                className="flex items-center lg:w-3/5 mx-auto p-10 mb-10 sm:flex-row flex-col bg-gray-900/75 rounded-lg"
               >
                 <Lorem Id={Id} h2={head} p={descriptionText} icon={icon} />
               </motion.div>

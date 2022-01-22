@@ -1,7 +1,7 @@
 const carouselText: string[] = [
-  "I'm a Developer",
-  "I'm a Programmer",
-  "I'm just a guy who knows how to code things",
+  " a Developer",
+  " a Programmer",
+  " just a guy who knows how to code things",
 ];
 
 export default function typingCarousel(
@@ -16,7 +16,6 @@ async function typeSentence(
   delay = 100
 ) {
   let letters = sentence.split("");
-  letters.unshift("‎");
   let i = 0;
   while (i < letters.length) {
     await waitForMs(delay);
@@ -31,7 +30,7 @@ async function typeSentence(
 async function deleteSentence(eleRef: HTMLHeadingElement) {
   const sentence = eleRef.innerHTML;
   const letters = sentence.split("");
-  while (letters.length !== 1) {
+  while (letters.length !== 3) {
     await waitForMs(100);
     letters.pop();
     eleRef.innerHTML = letters.join("");
@@ -60,12 +59,6 @@ async function carousel(carouselList: string[], eleRef: HTMLHeadingElement) {
         i = 0;
       }
     }
-  }
-}
-
-function updateFontColor(eleRef: HTMLHeadingElement, color: string) {
-  if (process.browser) {
-    eleRef.style.color = color;
   }
 }
 

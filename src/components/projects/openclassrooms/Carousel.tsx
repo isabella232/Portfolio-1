@@ -8,7 +8,7 @@ const Carousel = () => {
     event.preventDefault();
   };
   return (
-    <div className="max-w-lg">
+    <div className="max-w-lg border border-white rounded-xl">
       <Flicking align="prev" circular={false} autoResize={true}>
         {OC_ImagesData.map((image, index) => (
           <div

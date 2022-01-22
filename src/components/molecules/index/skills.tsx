@@ -3,11 +3,13 @@ import React from "react";
 
 const IndexSkills = () => {
   return (
-    <div className="text-lg text-indigo-500">
-      <p className="mb-4 font-bold tracking-widest uppercase">Skills</p>
+    <div className="text-lg text-white ">
+      {/* <p className="mb-4 font-bold tracking-widest uppercase text-left md:text-center">
+        Skills
+      </p>
       <div className="flex flex-col md:flex-row items-start justify-around mb-10">
         <ul className="flex flex-col">
-          <li className="flex">
+          <li className="flex bg-gray-900">
             <span className="mr-1">
               <svg
                 className="w-5 h-5 mt-px"
@@ -25,7 +27,7 @@ const IndexSkills = () => {
             </span>
             C#
           </li>
-          <li className="flex">
+          <li className="flex bg-gray-900">
             <span className="mr-1">
               <svg
                 className="w-5 h-5 mt-px text-deep-purple-accent-400"
@@ -43,7 +45,7 @@ const IndexSkills = () => {
             </span>
             Javascript
           </li>
-          <li className="flex">
+          <li className="flex bg-gray-900">
             <span className="mr-1">
               <svg
                 className="w-5 h-5 mt-px text-deep-purple-accent-400"
@@ -63,7 +65,7 @@ const IndexSkills = () => {
           </li>
         </ul>
         <ul className="flex flex-col">
-          <li className="flex">
+          <li className="flex bg-gray-900">
             <span className="mr-1">
               <svg
                 className="w-5 h-5 mt-px text-deep-purple-accent-400"
@@ -81,7 +83,7 @@ const IndexSkills = () => {
             </span>
             HTML & CSS
           </li>
-          <li className="flex">
+          <li className="flex bg-gray-900">
             <span className="mr-1">
               <svg
                 className="w-5 h-5 mt-px text-deep-purple-accent-400"
@@ -100,11 +102,11 @@ const IndexSkills = () => {
             Others Skills
           </li>
         </ul>
-      </div>
-      <div className="liquid-btn inline-flex rounded-lg">
+      </div> */}
+      <div className="liquid-btn inline-flex">
         <Link href="/skills">
-          <a className="rounded-lg">
-            <span className="relative z-10 text-white">Read More</span>
+          <a className="rounded-lg focus:scale-90 transition duration-300">
+            <span className="relative z-10 text-white">Skills</span>
             <div className="wave bg-indigo-700"></div>
           </a>
         </Link>

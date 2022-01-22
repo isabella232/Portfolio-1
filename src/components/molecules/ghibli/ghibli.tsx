@@ -34,11 +34,7 @@ const Ghibli = () => {
   generateList();
   const getRandomGhibli = () => {
     let rnd = Math.floor(Math.random() * GhibliTachi.length);
-    if (rnd === GhibliTachi.length) {
-      setIsRobot(true);
-      return GhibliTachi[rnd];
-    }
-    setIsRobot(false);
+    rnd === GhibliTachi.length - 1 ? setIsRobot(true) : setIsRobot(false);
     return GhibliTachi[rnd];
   };
   useEffect(() => {
@@ -55,7 +51,7 @@ const Ghibli = () => {
       {ghibli && (
         <div
           className={
-            (isRobot ? "-top-40 h-4/5 w-screen " : "top-40 h-3/5 w-screen ") +
+            (isRobot ? "robot " : "top-40 h-3/5 w-screen ") +
             "hidden sm:flex ghibli fixed justify-center items-center space-x-48"
           }
         >

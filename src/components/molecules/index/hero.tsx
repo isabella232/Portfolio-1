@@ -8,12 +8,12 @@ const Hero = () => {
         <GiBrain className="w-7 h-7 text-gray-200" />
       </div>
       <div className="mb-10 md:mb-12">
-        <h2 className="mb-7 text-3xl sm:text-4xl font-bold leading-none tracking-tight text-gray-200 md:mx-auto">
+        <h2 className="mb-7 text-3xl sm:text-4xl font-bold leading-none tracking-tight md:mx-auto">
           <span className="relative inline-block">
             <svg
               viewBox="0 0 52 24"
               fill="currentColor"
-              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
             >
               <defs>
                 <pattern
@@ -36,7 +36,7 @@ const Hero = () => {
           </span>{" "}
           My name is Arno
         </h2>
-        <p className="text-base text-gray-300 md:text-lg">
+        <p className="text-base md:text-lg">
           Welcome to my site where you can learn more about me, see what I do,
           what I did and what I will do.
         </p>

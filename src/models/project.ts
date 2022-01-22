@@ -6,7 +6,6 @@ interface link {
 interface IProject {
   key: number;
   title: string;
-  subtitle: string;
   description: string;
   features: string[];
   sources?: string[];

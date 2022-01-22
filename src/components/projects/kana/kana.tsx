@@ -81,7 +81,7 @@ const Button = ({ Id, hotkey }: ButtonProps) => {
   switch (hotkey) {
     case "up":
       button = (
-        <div className="answer text-center">
+        <div className="flat-button answer text-center">
           <div
             id={Id}
             className="up"
@@ -94,7 +94,7 @@ const Button = ({ Id, hotkey }: ButtonProps) => {
       break;
     case "down":
       button = (
-        <div className="answer text-center">
+        <div className="flat-button answer text-center">
           <div
             id={Id}
             className="down"
@@ -107,7 +107,7 @@ const Button = ({ Id, hotkey }: ButtonProps) => {
       break;
     case "right":
       button = (
-        <div className="answer text-center">
+        <div className="flat-button answer text-center">
           <div
             id={Id}
             className="right"
@@ -120,7 +120,7 @@ const Button = ({ Id, hotkey }: ButtonProps) => {
       break;
     case "left":
       button = (
-        <div className="answer text-center">
+        <div className="flat-button answer text-center">
           <div
             id={Id}
             className="left"
@@ -199,7 +199,7 @@ const Kana = () => {
   return (
     <div className="kana_trainer">
       <TitleBar />
-      <div className="main">
+      <div className="main relative">
         {/* <ContextMenuTrigger Id="context-menu"> */}
         <div>
           <i id="btnSettings" className="material-icons">
@@ -208,10 +208,14 @@ const Kana = () => {
         </div>
         <h1 className="text-center" id="Kana"></h1>
         <div className="answers">
-          <Button Id="btnA" hotkey="up" />
-          <Button Id="btnB" hotkey="down" />
-          <Button Id="btnC" hotkey="left" />
-          <Button Id="btnD" hotkey="right" />
+          <div className="flex">
+            <Button Id="btnA" hotkey="up" />
+            <Button Id="btnB" hotkey="down" />
+          </div>
+          <div className="flex">
+            <Button Id="btnC" hotkey="left" />
+            <Button Id="btnD" hotkey="right" />
+          </div>
         </div>
         {/* </ContextMenuTrigger> */}
         <Settings />
@@ -235,8 +239,8 @@ const updateScore = (event: any) => {
     } else {
       kana.classList.add("lose");
       event.target.classList.add("show");
-      document.querySelector(".flat-button.win")?.classList.add("show");
     }
+    document.querySelector(".flat-button.win")?.classList.add("show");
     score = Math.round((validQuestions / totalQuestions) * 100);
   }
   setTimeout(() => {
@@ -249,5 +253,5 @@ const updateScore = (event: any) => {
       document.querySelector(".flat-button.win")?.classList.remove("show");
     }
     Load();
-  }, 350);
+  }, 300);
 };

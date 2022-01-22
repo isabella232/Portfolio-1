@@ -1,4 +1,4 @@
-import Contact from "@/components/atoms/contact";
+import Contact from "@/components/atoms/contact/contact";
 import Header from "@/components/atoms/shared/header";
 import { motion, Variants } from "framer-motion";
 import Head from "next/head";
@@ -30,7 +30,7 @@ const ContactPage = () => {
       variants={page}
       initial={"hidden"}
       animate={"show"}
-      className="container mx-auto"
+      className="container mx-auto h-screen"
     >
       <Head>
         <title>Contact</title>

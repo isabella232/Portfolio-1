@@ -1,26 +1,24 @@
-import Header from "@/components/atoms/header";
-import SVG from "@/components/atoms/svg";
-import Thanks from "@/components/atoms/thanks";
+import Calcifer from "@/components/atoms/ghibli/calcifer";
+import Kodama from "@/components/atoms/ghibli/kodama";
+import NoFace from "@/components/atoms/ghibli/noface";
+import SootBall from "@/components/atoms/ghibli/sootball";
+import YuBird from "@/components/atoms/ghibli/yubird";
+import Header from "@/components/atoms/shared/header";
+import SVG from "@/components/atoms/shared/svg";
+import Thanks from "@/components/atoms/shared/thanks";
+import SmallSkillBadge from "@/components/atoms/skills/small-skill-badge";
 import Card from "@/components/molecules/howto/card";
-import RightLorem from "@/components/molecules/me/right-lorem";
-import SmallSkillBadge from "@/components/molecules/skills/small-skill-badge";
-import Skill from "@/components/organisms/content/skill";
+import Lorem from "@/components/molecules/me/lorem";
+import Skill from "@/components/molecules/skills/skill";
 import { motion, Variants } from "framer-motion";
 import Head from "next/head";
 import React, { useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
+import { ImArrowDownLeft2, ImArrowDownRight2 } from "react-icons/im";
 import { RiArticleLine } from "react-icons/ri";
 import { SiFirebase, SiNextdotjs, SiReact, SiVercel } from "react-icons/si";
 import tippy from "tippy.js";
 
-let element: React.ReactNode = (
-  <>
-    <p>
-      Blue bottle rucifix vinyl post-ironic four dollar toast vegan taxidermy.
-    </p>
-    <p>Gastropub indxgo juice poutine.</p>
-  </>
-);
 const page: Variants = {
   hidden: { opacity: 0, y: -20 },
   show: {
@@ -37,7 +35,7 @@ const item: Variants = {
   hidden: { opacity: 0, y: 200 },
   show: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeInOut" } },
 };
-const HowTo = () => {
+const HowToPage = () => {
   useEffect(() => {
     tippy("[data-tippy-content]");
   }, []);
@@ -51,32 +49,37 @@ const HowTo = () => {
       <Head>
         <title>Credits</title>
       </Head>
-      <Header text="How to" />
-      <div className="m-8 p-8 bg-gray-800 shadow-xl hover:scale-105 duration-300 rounded-xl">
-        <div className="flex text-8xl justify-evenly m-5 text-center">
+      <Header text="Credits" />
+      <div className="m-8 p-8 border-white bg-gray-900/75 border hover:scale-105 duration-300 rounded-xl">
+        <div className="flex flex-col items-center sm:flex-row text-8xl justify-evenly m-5 text-center">
           <div
             className="text-cyan-600 p-2"
             data-tippy-content="npx create-react-app my-app"
           >
-            <SiReact />
+            <a href="https://reactjs.org">
+              <SiReact />
+            </a>
             <p className="text-sm font-bold text-white mt-2">React</p>
           </div>
           <div
             className="text-black p-2"
             data-tippy-content="npx create-next-app nextjs-app"
           >
-            <SiNextdotjs />
+            <a href="https://nextjs.org">
+              <SiNextdotjs />
+            </a>
             <p className="text-sm font-bold text-white mt-2">Next</p>
           </div>
-          <div
-            className="text-yellow-400 p-2"
-            data-tippy-content="npx create-next-app nextjs-app"
-          >
-            <SiFirebase />
+          <div className="text-yellow-400 p-2">
+            <a href="https://firebase.google.com">
+              <SiFirebase />
+            </a>
             <p className="text-sm font-bold text-white mt-2">Firebase</p>
           </div>
           <div className="text-black p-2">
-            <SiVercel />
+            <a href="https://vercel.com/">
+              <SiVercel />
+            </a>
             <p className="text-sm font-bold text-white mt-2">Vercel</p>
           </div>
         </div>
@@ -85,11 +88,22 @@ const HowTo = () => {
           <span className="inline-block text-xl">
             <FaHeart />
           </span>{" "}
-          in France.
+          from France.
         </motion.span>
       </div>
       <p className="text-3xl text-center font-semibold">
-        How to <a href="https://tailwindcss.com">Tailwind</a>
+        Credits <a href="https://tailwindcss.com">Tailwind</a>
+      </p>
+      <p className="text-center">
+        <ImArrowDownRight2 className="h-7 w-7 inline-block" />
+        <a
+          className="text-xl font-semibold text-white hover:text-indigo-500
+          "
+          href="https://codepen.io/laijoann/pen/yLeKmVK"
+        >
+          <span> ( Codepen.io ) </span>
+        </a>
+        <ImArrowDownLeft2 className="h-7 w-7 inline-block" />
       </p>
       <div className="m-2">
         <motion.div
@@ -99,7 +113,7 @@ const HowTo = () => {
           className="deck"
         >
           <Card
-            id={1}
+            Id={1}
             header={
               <Thanks
                 source={{
@@ -111,15 +125,19 @@ const HowTo = () => {
             }
           >
             <div className="flex items-center mx-auto sm:flex-row flex-col">
-              <RightLorem
+              <Lorem
+                Id={0}
                 h2="The Catalyzer"
-                children={element}
+                p={[
+                  "Blue bottle rucifix vinyl post-ironic four dollar toast vegan taxidermy.",
+                  "Gastropub indxgo juice poutine.",
+                ]}
                 icon={"scissors"}
               />
             </div>
           </Card>
           <Card
-            id={2}
+            Id={2}
             header={
               <Thanks
                 source={{
@@ -130,13 +148,13 @@ const HowTo = () => {
               />
             }
           >
-            <Skill id="1" text="Authentic Cliche Forage" isHowTo={true}>
+            <Skill Id="1" text="Authentic Cliche Forage" isHowTo={true}>
               <SmallSkillBadge text="First Link" />
               <SmallSkillBadge text="Second Link" />
             </Skill>
           </Card>
           <Card
-            id={3}
+            Id={3}
             header={
               <Thanks
                 source={{
@@ -246,7 +264,7 @@ const HowTo = () => {
       <div className="m-2">
         <div className="deck">
           <Card
-            id={1}
+            Id={1}
             header={
               <Thanks
                 source={{
@@ -275,7 +293,7 @@ const HowTo = () => {
             </div>
           </Card>
           <Card
-            id={2}
+            Id={2}
             header={
               <Thanks
                 source={{
@@ -296,9 +314,9 @@ const HowTo = () => {
                       viewBox="0 0 52 52"
                     >
                       <polygon
-                        stroke-width="3"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         fill="none"
                         points="29 13 14 29 25 29 23 39 38 23 27 23"
                       ></polygon>
@@ -349,7 +367,7 @@ const HowTo = () => {
             </div>
           </Card>
           <Card
-            id={3}
+            Id={3}
             header={
               <Thanks
                 source={{
@@ -384,17 +402,49 @@ const HowTo = () => {
           </Card>
         </div>
       </div>
-      <div className="m-2 text-center">
-        <a
-          className="text-xl font-semibold text-white hover:text-indigo-500
-          "
-          href="https://codepen.io/laijoann/pen/yLeKmVK"
-        >
-          Codepen.io
-        </a>
+      <p className="text-3xl text-center font-semibold">
+        Credits{" "}
+        <a href="https://freefrontend.com/css-ghibli-characters/">Ghilbis</a>
+      </p>
+      <div className="ghibli flex flex-col md:flex-row items-center justify-between">
+        <div className="scale-50 hover:scale-75 transition duration-300">
+          <div className="cursor-pointer">
+            <a href="https://codepen.io/chilliconcode/pen/MbXKWB">
+              <Calcifer />
+            </a>
+          </div>
+        </div>
+        <div className="scale-50 hover:scale-75 transition duration-300">
+          <div className="cursor-pointer">
+            <a href="https://codepen.io/AndreusCafe/pen/QWyvjXE">
+              <Kodama />
+            </a>
+          </div>
+        </div>
+        <div className="scale-50 hover:scale-75 transition duration-300">
+          <div className="cursor-pointer">
+            <a href="https://codepen.io/chilliconcode/pen/Vmxzpm">
+              <NoFace />
+            </a>
+          </div>
+        </div>
+        <div className="scale-50 hover:scale-75 transition duration-300">
+          <div className="cursor-pointer">
+            <a href="https://codepen.io/chilliconcode/pen/qqyZBZ">
+              <SootBall />
+            </a>
+          </div>
+        </div>
+        <div className="scale-50 hover:scale-75 transition duration-300">
+          <div className="cursor-pointer">
+            <a href="https://codepen.io/chilliconcode/pen/gLKmrg">
+              <YuBird />
+            </a>
+          </div>
+        </div>
       </div>
     </motion.section>
   );
 };
 
-export default HowTo;
+export default HowToPage;

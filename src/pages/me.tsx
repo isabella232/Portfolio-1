@@ -18,7 +18,7 @@ const MePage = () => {
   useEffect(() => {
     setTimeout(() => {
       typingcarousel(headerRef.current);
-    }, 500);
+    }, 300);
   }, [headerRef]);
   return (
     <motion.section variants={page} initial={"hidden"} animate={"show"}>
@@ -32,7 +32,7 @@ const MePage = () => {
         >
           {"I'm "}
         </h1>
-        <span className="input-cursor w-0.5 h-10 bg-white ml-2"></span>
+        {/* <span className="input-cursor w-0.5 h-10 bg-white ml-2"></span> */}
       </div>
       <Lorems />
     </motion.section>

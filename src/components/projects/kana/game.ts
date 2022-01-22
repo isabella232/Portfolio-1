@@ -3,16 +3,19 @@ import Kana from "./kanas";
 
 const btnArray = ["btnA", "btnB", "btnC", "btnD"];
 var previousKana = "";
-
+var firstLoad = true;
 export default function Load() {
-  setEventsListener();
+  if (firstLoad) {
+    setEventsListener();
+    firstLoad = false;
+  }
   //* With rndValueArray() create an with 4 randoms kana
   var answerKanaArray = generateAnswersKana(Kana.Full);
   //* Set the kana on the page
   console.table(answerKanaArray);
-  let t = document.getElementById("Kana");
-  if (t) {
-    t.textContent = HiraganaKatakana(answerKanaArray[0]);
+  let kana = document.getElementById("Kana");
+  if (kana) {
+    kana.textContent = HiraganaKatakana(answerKanaArray[0]);
   }
   //* Clone array to splice it
   let btnAnswer = [...btnArray];

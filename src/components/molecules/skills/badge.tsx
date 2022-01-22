@@ -25,7 +25,8 @@ const Badge = ({ Id, icon, color, power }: Props) => {
   return (
     <motion.div
       variants={variants}
-      onMouseOver={() => setIsBeingHovered(true)}
+      onMouseEnter={() => setIsBeingHovered(true)}
+      onMouseLeave={() => setIsBeingHovered(power === "full" ? true : false)}
       exit={"exit"}
       className="flex flex-col items-center mx-2"
       id={Id}
