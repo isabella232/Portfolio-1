@@ -7,7 +7,7 @@ type Props = {
 };
 const KeyPoint = ({ icon, title, text }: Props) => {
   return (
-    <div className="p-5 duration-300 transform border-white bg-gray-900/75 border rounded shadow-sm hover:-translate-y-2">
+    <div className="p-5 duration-300 transform bg-gray-900/75 border border-gray-700 rounded shadow-sm hover:-translate-y-2">
       <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-500">
         {icon}
       </div>

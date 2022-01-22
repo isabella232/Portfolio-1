@@ -24,7 +24,7 @@ const HomePage = () => {
       initial={"hidden"}
       animate={"show"}
       exit={"exit"}
-      className="py-20 mx-auto max-w-md md:max-w-lg"
+      className="container py-10 mx-auto"
     >
       <Head>
         <title>Home</title>
