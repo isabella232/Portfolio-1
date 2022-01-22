@@ -16,11 +16,11 @@ const Contact = ({ icon, href, text }: Props) => {
   return (
     <motion.a
       variants={item}
-      className="flex flex-col items-center m-2 sm:m-0"
+      className="flex flex-col items-center m-2 sm:m-0 text-gray-900 dark:text-indigo-600"
       href={href}
     >
+      <span className="text-lg font-bold">{text}</span>
       {icon}
-      <span className="text-lg text-white">{text}</span>
     </motion.a>
   );
 };

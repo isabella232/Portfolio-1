@@ -23,7 +23,7 @@ const SkillDetailsCard = ({ children }: Props) => {
       variants={variants}
       initial={"hidden"}
       animate={"show"}
-      className="fixed mt-14 p-5 bg-indigo-500 dark:bg-gray-700 rounded-xl"
+      className="absolute z-40 mt-14 p-5 bg-indigo-500 dark:bg-gray-700 rounded-xl"
     >
       <h2 className="font-bold tracking-widest text-white mb-4 text-sm text-center uppercase">
         Skill Details

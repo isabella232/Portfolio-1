@@ -1,5 +1,5 @@
-import BigSkillBadge from "@/components/molecules/skills/big-skill-badge";
-import SkillDetailsCard from "@/molecules/skills/skill-details-card";
+import BigSkillBadge from "@/components/atoms/skills/big-skill-badge";
+import SkillDetailsCard from "@/components/atoms/skills/skill-details-card";
 import {
   getElementsBelow,
   hideElementsBelow,
