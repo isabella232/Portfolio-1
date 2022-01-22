@@ -1,4 +1,5 @@
 import React, { MouseEvent } from "react";
+import { BiCog } from "react-icons/bi";
 import { GiJapan } from "react-icons/gi";
 import Load from "./game";
 // import {
@@ -202,9 +203,7 @@ const Kana = () => {
       <div className="main relative">
         {/* <ContextMenuTrigger Id="context-menu"> */}
         <div>
-          <i id="btnSettings" className="material-icons">
-            settings
-          </i>
+          <BiCog id="btnSettings" className="material-icons" />
         </div>
         <h1 className="text-center" id="Kana"></h1>
         <div className="answers">
