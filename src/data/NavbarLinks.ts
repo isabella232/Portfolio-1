@@ -11,7 +11,7 @@ const NavBarLinks: Array<NavBarLinkProps> = [
   { Id: 3, text: "Blogs", href: "/blogs" },
   { Id: 4, text: "Contact", href: "/contact" },
   { Id: 5, text: "Me", href: "/me" },
-  { Id: 6, text: "Credits", href: "/howto" },
+  { Id: 6, text: "Credits", href: "/credits" },
 ];
 
 export default NavBarLinks;

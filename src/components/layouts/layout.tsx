@@ -11,7 +11,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <div className="h-full">
-        <div className="flex flex-col items-stretch min-h-full">
+        <div className="flex flex-col items-stretch min-h-screen">
           <Navbar />
           <Ghibli />
           <main className="flex-shrink-0 flex-grow z-20">{children}</main>

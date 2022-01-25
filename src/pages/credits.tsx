@@ -16,7 +16,7 @@ import React, { useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
 import { ImArrowDownLeft2, ImArrowDownRight2 } from "react-icons/im";
 import { RiArticleLine } from "react-icons/ri";
-import { SiFirebase, SiNextdotjs, SiReact, SiVercel } from "react-icons/si";
+import { SiFirebase, SiNextdotjs, SiReact } from "react-icons/si";
 import tippy from "tippy.js";
 
 const page: Variants = {
@@ -75,12 +75,6 @@ const HowToPage = () => {
               <SiFirebase />
             </a>
             <p className="text-sm font-bold text-white mt-2">Firebase</p>
-          </div>
-          <div className="text-black p-2">
-            <a href="https://vercel.com/">
-              <SiVercel />
-            </a>
-            <p className="text-sm font-bold text-white mt-2">Vercel</p>
           </div>
         </div>
         <motion.span variants={item} className="text-white text-2xl">

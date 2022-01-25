@@ -22,7 +22,7 @@ const SkillsPage = () => {
       variants={page}
       initial={"hidden"}
       animate={"show"}
-      className="container mx-auto h-screen"
+      className="container mx-auto"
     >
       <Head>
         <title>Skills</title>
