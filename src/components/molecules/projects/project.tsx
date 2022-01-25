@@ -17,7 +17,7 @@ const item: Variants = {
 const Project = ({ project, children }: Props) => {
   return (
     <motion.div variants={item}>
-      <div className="flex flex-col lg:flex-row my-8 p-2 mx-auto sm:w-max border border-gray-700 rounded-xl bg-gray-900/75">
+      <div className="flex flex-col lg:flex-row my-8 p-2 mx-auto sm:w-max crystal-card">
         <ProjectText project={project} />
         <ProjectDisplay project={project} children={children} />
         <ProjectAbout project={project} />

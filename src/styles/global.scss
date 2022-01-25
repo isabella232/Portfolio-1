@@ -35,8 +35,8 @@ body,
   transition-duration: 250ms;
 }
 
-.btn {
-  @apply inline-flex  border-0 py-1 px-4 mx-1 my-4 focus:outline-none rounded text-white hover:bg-indigo-600  bg-indigo-500 dark:hover:bg-gray-600 dark:bg-gray-500;
+.crystal-card {
+  @apply dark:bg-gray-900/75 border border-gray-700/75 rounded-2xl;
 }
 
 .navbar-menu-btn {

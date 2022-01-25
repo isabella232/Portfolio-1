@@ -50,11 +50,11 @@ const HowToPage = () => {
         <title>Credits</title>
       </Head>
       <Header text="Credits" />
-      <div className="m-8 p-8 border-gray-700 bg-gray-900/75 border hover:scale-105 duration-300 rounded-xl">
+      <div className="m-8 p-8 crystal-card">
         <div className="flex flex-col items-center sm:flex-row text-8xl justify-evenly m-5 text-center">
           <div
             className="text-cyan-600 p-2"
-            data-tippy-content="npx create-react-app my-app"
+            data-tippy-content="npx create-react-app"
           >
             <a href="https://reactjs.org">
               <SiReact />
@@ -63,14 +63,17 @@ const HowToPage = () => {
           </div>
           <div
             className="text-black p-2"
-            data-tippy-content="npx create-next-app nextjs-app"
+            data-tippy-content="npx create-next-app"
           >
             <a href="https://nextjs.org">
               <SiNextdotjs />
             </a>
             <p className="text-sm font-bold text-white mt-2">Next</p>
           </div>
-          <div className="text-yellow-400 p-2">
+          <div
+            className="text-yellow-400 p-2"
+            data-tippy-content="yarn add firebase"
+          >
             <a href="https://firebase.google.com">
               <SiFirebase />
             </a>
@@ -400,36 +403,36 @@ const HowToPage = () => {
         Credits{" "}
         <a href="https://freefrontend.com/css-ghibli-characters/">Ghibli</a>
       </p>
-      <div className="ghibli my-2 bg-gray-900/75 border border-gray-700 rounded flex flex-col md:flex-row items-center justify-evenly">
-        <div className="scale-50 hover:scale-75 transition duration-300">
+      <div className="ghibli my-2 flex flex-col md:flex-row items-center justify-evenly crystal-card">
+        <div className="scale-50 transition duration-300">
           <div className="cursor-pointer">
             <a href="https://codepen.io/chilliconcode/pen/MbXKWB">
               <Calcifer />
             </a>
           </div>
         </div>
-        <div className="scale-50 hover:scale-75 transition duration-300">
+        <div className="scale-50 transition duration-300">
           <div className="cursor-pointer">
             <a href="https://codepen.io/AndreusCafe/pen/QWyvjXE">
               <Kodama />
             </a>
           </div>
         </div>
-        <div className="scale-50 hover:scale-75 transition duration-300">
+        <div className="scale-50 transition duration-300">
           <div className="cursor-pointer">
             <a href="https://codepen.io/chilliconcode/pen/Vmxzpm">
               <NoFace />
             </a>
           </div>
         </div>
-        <div className="scale-50 hover:scale-75 transition duration-300">
+        <div className="scale-50 transition duration-300">
           <div className="cursor-pointer">
             <a href="https://codepen.io/chilliconcode/pen/qqyZBZ">
               <SootBall />
             </a>
           </div>
         </div>
-        <div className="scale-50 hover:scale-75 transition duration-300">
+        <div className="scale-50 transition duration-300">
           <div className="cursor-pointer">
             <a href="https://codepen.io/chilliconcode/pen/gLKmrg">
               <YuBird />
