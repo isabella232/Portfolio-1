@@ -37,8 +37,8 @@ const Hero = () => {
           My name is Arno
         </h2>
         <p className="text-base md:text-lg">
-          Welcome to my site where you can learn more about me, see what I do,
-          what I did and what I will do.
+          Welcome to my site where you can learn more about me, see what I did,
+          what I do and what I will do.
         </p>
       </div>
     </>
