@@ -1,6 +1,9 @@
 import $ from "jquery";
 import moment from "moment";
 
+type Digits = {
+  [key: string]: JQuery;
+};
 const Time = () => {
   let date = $(".date-text");
   date.text(moment().format("DD / MM / YY"));
@@ -18,8 +21,7 @@ const Time = () => {
   // });
 
   // Cache some selectors
-  let clock = $("#clock"),
-    ampm = clock.find(".ampm");
+  let clock = $("#clock");
 
   // Map digits to their names (this will be an array)
   let digit_to_name = "zero one two three four five six seven eight nine".split(
@@ -27,7 +29,7 @@ const Time = () => {
   );
 
   // This object will hold the digit elements
-  let digits = {};
+  let digits: Digits = {};
 
   // Positions for the hours, minutes, and seconds
   let positions = ["h1", "h2", ":", "m1", "m2", ":", "s1", "s2"];
@@ -49,7 +51,6 @@ const Time = () => {
 
       // Set the digits as key:value pairs in the digits object
       digits[this] = pos;
-
       // Add the digit elements to the page
       digit_holder.append(pos);
     }
@@ -75,19 +76,21 @@ const Time = () => {
     // d is for day of week and A is for AM/PM
 
     let now = moment().format(format);
-
-    digits.h1.attr("class", digit_to_name[now[0]]);
-    digits.h2.attr("class", digit_to_name[now[1]]);
-    digits.m1.attr("class", digit_to_name[now[2]]);
-    digits.m2.attr("class", digit_to_name[now[3]]);
-    digits.s1.attr("class", digit_to_name[now[4]]);
-    digits.s2.attr("class", digit_to_name[now[5]]);
+    if (digits !== undefined && digits !== null) {
+      digits.h1.attr("class", digit_to_name[Number(now[0])]);
+      digits.h1.attr("class", digit_to_name[Number(now[0])]);
+      digits.h2.attr("class", digit_to_name[Number(now[1])]);
+      digits.m1.attr("class", digit_to_name[Number(now[2])]);
+      digits.m2.attr("class", digit_to_name[Number(now[3])]);
+      digits.s1.attr("class", digit_to_name[Number(now[4])]);
+      digits.s2.attr("class", digit_to_name[Number(now[5])]);
+    }
 
     // The library returns Sunday as the first day of the week.
     // Stupid, I know. Lets shift all the days one position down,
     // and make Sunday last
 
-    let dow = now[6];
+    let dow: number = Number(now[6]);
     dow--;
 
     // Sunday!
@@ -98,9 +101,6 @@ const Time = () => {
 
     // Mark the active day of the week
     weekdays.removeClass("active").eq(dow).addClass("active");
-
-    // Set the am/pm text:
-    // ampm.text(now[7] + now[8]);
 
     // Schedule this function to be run again in 1 sec
     setTimeout(update_time, 1000);
