@@ -1,5 +1,6 @@
 import Blog from "@/components/molecules/blogs/blog";
 import Post from "@/models/post";
+import { nanoid } from "nanoid";
 import React from "react";
 type Props = {
   blogs: Post[];
@@ -12,6 +13,7 @@ const Blogs = ({ blogs }: Props) => {
       {blogs.map((blog) => {
         return (
           <Blog
+            key={nanoid()}
             content={blog.content}
             slug={blog.slug}
             frontmatter={blog.frontmatter}

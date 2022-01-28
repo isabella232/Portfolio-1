@@ -10,11 +10,7 @@ const Blog = ({ frontmatter, slug }: Post) => {
     <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-70 cursor-pointer m-5">
       <Link href={`/blog/${slug}`}>
         <a>
-          <img
-            src="assets/img/pp.jpg"
-            alt="blog photo"
-            className="max-h-40 w-full object-cover"
-          />
+          <img alt="blog photo" className="max-h-40 w-full object-cover" />
         </a>
       </Link>
       <div className="bg-white dark:bg-gray-800 w-full p-4">

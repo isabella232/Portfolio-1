@@ -46,7 +46,7 @@ export async function getStaticProps() {
       description: data.description,
       tags: data.tags,
       // createdAt: data.createdAt,
-      updatedAt: Math.floor(data.updatedAt / 1000),
+      updatedAt: Math.floor(Date.now() / 1000),
     };
 
     return {
@@ -55,7 +55,6 @@ export async function getStaticProps() {
       frontmatter,
     };
   });
-
   return {
     props: { blogs },
   };
