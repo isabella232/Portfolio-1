@@ -19,10 +19,10 @@ const ProjectDisplay = ({ project, children }: Props) => {
   //   }
   // }, [isBlurred]);
   useEffect(() => {
-    if (project.key == 2) {
+    if (project.Id == 2) {
       Load();
     }
-    if (project.key == 3) {
+    if (project.Id == 3) {
       Time();
     }
   }, []);

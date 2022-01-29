@@ -1,4 +1,5 @@
 import ILorem from "@/models/lorem";
+import IProject from "@/models/project";
 import ISkill from "@/models/skill";
 import { initializeApp } from "firebase/app";
 import {
@@ -23,3 +24,4 @@ const createCollection = <T = DocumentData>(collectionName: string) => {
 
 export const SkillsCol = createCollection<ISkill>("Skills");
 export const LoremsCol = createCollection<ILorem>("Lorems");
+export const ProjectsCol = createCollection<IProject>("Projects");

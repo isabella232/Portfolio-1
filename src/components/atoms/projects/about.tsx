@@ -1,5 +1,6 @@
 import IProject from "@/models/project";
 import React from "react";
+import { GoMarkGithub } from "react-icons/go";
 type Props = {
   project: IProject;
 };
@@ -11,11 +12,11 @@ const ProjectAbout = ({ project }: Props) => {
       </p>
       <a
         className="bg-black rounded-full w-min text-5xl p-4 cursor-pointer"
-        href={project.link.h}
+        href={project.link}
         target="_blank"
         rel="noopener"
       >
-        {project.link.i()}
+        <GoMarkGithub />
       </a>
     </div>
   );

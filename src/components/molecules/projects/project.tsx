@@ -4,6 +4,7 @@ import ProjectText from "@/components/atoms/projects/text";
 import IProject from "@/models/project";
 import { motion, Variants } from "framer-motion";
 import React from "react";
+
 type Props = {
   project: IProject;
   children?: React.ReactNode;

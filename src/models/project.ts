@@ -1,15 +1,10 @@
-interface link {
-  h: string;
-  i: CallableFunction;
-}
-
 interface IProject {
-  key: number;
+  Id: number;
   title: string;
   description: string;
   features: string[];
   sources?: string[];
-  link: link;
-  component?: React.ReactNode | string;
+  link: string;
+  component?: string;
 }
 export default IProject;
