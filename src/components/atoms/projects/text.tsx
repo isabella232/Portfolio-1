@@ -14,7 +14,7 @@ function ExtractDomain(source: string) {
 
 const ProjectText = ({ project }: Props) => {
   return (
-    <div className="p-7 -mt-4">
+    <div className="p-7 -mt-4 text-gray-900 dark:text-white">
       <p className="text-2xl font-bold">{project.title}</p>
       <div className="max-w-lg p-2">
         {project.description.split(". ").map((d) => {

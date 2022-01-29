@@ -44,7 +44,7 @@ const HowToPage = () => {
       variants={page}
       initial={"hidden"}
       animate={"show"}
-      className="container mx-auto text-white"
+      className="container mx-auto text-gray-900 dark:text-white"
     >
       <Head>
         <title>Credits</title>
@@ -59,7 +59,9 @@ const HowToPage = () => {
             <a href="https://reactjs.org">
               <SiReact />
             </a>
-            <p className="text-sm font-bold text-white mt-2">React</p>
+            <p className="text-sm font-bold text-gray-900 dark:text-white mt-2">
+              React
+            </p>
           </div>
           <div
             className="text-black p-2"
@@ -68,7 +70,9 @@ const HowToPage = () => {
             <a href="https://nextjs.org">
               <SiNextdotjs />
             </a>
-            <p className="text-sm font-bold text-white mt-2">Next</p>
+            <p className="text-sm font-bold text-gray-900 dark:text-white mt-2">
+              Next
+            </p>
           </div>
           <div
             className="text-yellow-400 p-2"
@@ -77,10 +81,15 @@ const HowToPage = () => {
             <a href="https://firebase.google.com">
               <SiFirebase />
             </a>
-            <p className="text-sm font-bold text-white mt-2">Firebase</p>
+            <p className="text-sm font-bold text-gray-900 dark:text-white mt-2">
+              Firebase
+            </p>
           </div>
         </div>
-        <motion.span variants={item} className="text-white text-2xl">
+        <motion.span
+          variants={item}
+          className="text-gray-900 dark:text-white text-2xl"
+        >
           Made with{" "}
           <span className="inline-block text-xl">
             <FaHeart />
@@ -88,13 +97,13 @@ const HowToPage = () => {
           from France.
         </motion.span>
       </div>
-      <p className="text-3xl text-center font-semibold">
+      <p className="text-3xl text-center font-semibold mb-8">
         Credits <a href="https://tailwindcss.com">Tailwind</a>
       </p>
       <p className="text-center">
         <ImArrowDownRight2 className="h-7 w-7 inline-block" />
         <a
-          className="text-xl font-semibold text-white hover:text-indigo-500
+          className="text-xl font-semibold text-gray-900 dark:text-white hover:text-indigo-500
           "
           href="https://codepen.io/laijoann/pen/yLeKmVK"
         >

@@ -15,14 +15,16 @@ const Lorem = ({ Id, h2, p, icon }: Props) => {
   let isEven = Id % 2 === 0;
   let children: React.ReactNode;
   if (typeof p === "string") {
-    children = <p className="leading-relaxed dark:text-gray-400">{p}</p>;
+    children = (
+      <p className="leading-relaxed text-gray-600 dark:text-gray-400">{p}</p>
+    );
   } else {
     children = p.map((p, index) => {
       return (
         <p
           id={"lorem-" + Id + "-" + index}
           key={nanoid()}
-          className="leading-relaxed dark:text-gray-400"
+          className="leading-relaxed text-gray-600 dark:text-gray-400"
         >
           {p}
         </p>

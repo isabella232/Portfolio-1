@@ -36,7 +36,10 @@ const Badge = ({ Id, icon, color, power }: Props) => {
         {!isBeingHovered && <Liquid power={power} />}
       </article>
       <span className="text-indigo-500 font-semibold">
-        LVL : <span className="text-white">{power.toUpperCase()}</span>{" "}
+        LVL :{" "}
+        <span className="text-gray-900 dark:text-white">
+          {power.toUpperCase()}
+        </span>{" "}
       </span>
     </motion.div>
   );

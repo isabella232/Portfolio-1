@@ -40,7 +40,7 @@ const ContactPage = () => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex flex-col sm:flex-row sm:my-40 my-10 justify-evenly items-center text-6xl sm:text-7xl text-indigo-500"
+        className="flex flex-col sm:flex-row sm:my-40 my-10 justify-evenly items-center text-6xl sm:text-7xl"
       >
         <Contact
           icon={<MdAlternateEmail />}

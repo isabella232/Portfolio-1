@@ -3,7 +3,7 @@ import { GiBrain } from "react-icons/gi";
 
 const Hero = () => {
   return (
-    <>
+    <div>
       <div className="mb-6 mx-auto flex items-center justify-center w-12 h-12 rounded-full bg-indigo-500">
         <GiBrain className="w-7 h-7 text-gray-200" />
       </div>
@@ -41,7 +41,7 @@ const Hero = () => {
           what I do and what I will do.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

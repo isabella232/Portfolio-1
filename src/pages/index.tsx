@@ -32,7 +32,7 @@ const HomePage = () => {
       <div className="flex flex-col text-center p-2 sm:p-0 text-indigo-600 dark:text-white">
         <Hero />
 
-        <div className="flex flex-col space-y-4 lg:flex-row justify-evenly lg:space-x-8 lg:space-y-0 items-center mb-8 text-indigo-700 dark:text-white">
+        <div className="flex flex-col space-y-4 lg:flex-row justify-evenly lg:space-x-8 lg:space-y-0 items-center mb-8">
           <KeyPoint
             icon={<GoDesktopDownload className="w-7 h-7 text-white" />}
             title={"Desktop App"}

@@ -17,10 +17,10 @@ const variants: Variants = {
 const SmallSkillBadge = ({ text }: Props) => {
   return (
     <motion.span variants={variants}>
-      <span className="bg-white dark:bg-gray-900  w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+      <span className="text-gray-900 bg-gray-300 dark:text-white dark:bg-gray-800 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
         {svg.SmallCheck}
       </span>
-      {text}
+      <span className="text-gray-900 dark:text-white">{text}</span>
     </motion.span>
   );
 };

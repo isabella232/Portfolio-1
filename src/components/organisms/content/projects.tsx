@@ -1,5 +1,6 @@
 import Loader from "@/components/atoms/shared/loader";
 import Project from "@/components/molecules/projects/project";
+import Clock from "@/components/projects/clock/clock";
 import Kana from "@/components/projects/kana/kana";
 import Carousel from "@/components/projects/openclassrooms/Carousel";
 import IProject from "@/models/project";
@@ -18,6 +19,18 @@ const container: Variants = {
     },
   },
 };
+const getComponent = (component: string | undefined) => {
+  switch (component) {
+    case "Carousel":
+      return <Carousel />;
+    case "Kana":
+      return <Kana />;
+    case "Clock":
+      return <Clock />;
+    default:
+      return component;
+  }
+};
 const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [projects, setProjects] = useState<IProject[]>([]);
@@ -33,13 +46,9 @@ const Projects = () => {
       {!isLoading && (
         <motion.div variants={container}>
           {projects.map((project) => {
-            const conditionC = project.component === "Carousel";
-            const conditionK = project.component === "Kana";
             return (
               <Project key={nanoid()} project={project}>
-                {conditionC && <Carousel />}
-                {conditionK && <Kana />}
-                {!conditionC && !conditionK && project.component}
+                {getComponent(project.component)}
               </Project>
             );
           })}

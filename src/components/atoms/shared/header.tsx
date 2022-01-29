@@ -6,7 +6,7 @@ type Props = {
 };
 const Header = ({ text }: Props) => {
   return (
-    <motion.h1 className="md:text-5xl text-4xl font-semibold text-white mt-10">
+    <motion.h1 className="md:text-5xl text-4xl font-semibold dark:text-white text-gray-900  mt-10">
       {text}
     </motion.h1>
   );

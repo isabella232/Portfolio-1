@@ -73,7 +73,7 @@ const BigIcon = ({ icon, isRight }: Props) => {
       whileTap="hover"
       variants={variants}
       className={
-        "sm:w-32 sm:h-32 h-20 w-20 inline-flex items-center justify-center rounded-full bg-indigo-200 dark:bg-gray-800 flex-shrink-0 " +
+        "sm:w-32 sm:h-32 h-20 w-20 inline-flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 flex-shrink-0 " +
         (isRight ? rightClasses : leftClass)
       }
     >

@@ -7,7 +7,7 @@ type Props = {
 const ProjectAbout = ({ project }: Props) => {
   return (
     <div className="flex flex-col items-center justify-center p-2 group">
-      <p className="text-center font-semibold m-4 group-hover:text-indigo-600 group-hover:scale-105 duration-300">
+      <p className="text-center font-semibold m-4 text-gray-900 dark:text-white group-hover:text-indigo-600 group-hover:scale-105 duration-300">
         Download / Clone :
       </p>
       <a

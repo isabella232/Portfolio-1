@@ -25,7 +25,7 @@ const SkillDetailsCard = ({ children }: Props) => {
       animate={"show"}
       className="absolute z-40 mt-14 p-5 crystal-card"
     >
-      <h2 className="font-bold tracking-widest text-white mb-4 text-sm text-center uppercase">
+      <h2 className="font-bold tracking-widest text-gray-900 dark:text-white mb-4 text-sm text-center uppercase">
         Skill Details
       </h2>
       <nav className="text-white flex flex-col items-start -mb-1 space-y-2">

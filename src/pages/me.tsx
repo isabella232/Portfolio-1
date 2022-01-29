@@ -28,7 +28,7 @@ const MePage = () => {
       <div className="flex justify-center items-center">
         <h1
           ref={headerRef as RefObject<HTMLHeadingElement>}
-          className="md:text-5xl text-4xl font-semibold text-center text-white my-10"
+          className="md:text-5xl text-4xl font-semibold text-center text-gray-900 dark:text-white my-10"
         >
           {"I'm "}
         </h1>

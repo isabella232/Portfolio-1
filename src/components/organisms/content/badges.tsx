@@ -190,7 +190,7 @@ const Badges = ({ activeBages }: Props) => {
             icon={<FaSass className="text-5xl" />}
             color="pink"
             power={"almost"}
-            Id={"b_Sass"}
+            Id={"b_Scss"}
           />
         </motion.div>
       )}

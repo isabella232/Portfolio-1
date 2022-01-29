@@ -1,3 +1,21 @@
+@mixin theme-colors($dark-theme) {
+  @if $dark-theme {
+    &::before {
+      background-color: rgb(20, 20, 20, 1);
+    }
+    &::after {
+      background-color: rgba(20, 20, 20, 0.5);
+    }
+  } @else {
+    &::before {
+      background-color: rgb(230, 230, 230);
+    }
+    &::after {
+      background-color: rgba(230, 230, 230, 0.5);
+    }
+  }
+}
+
 .liquid-btn {
   a {
     width: 200px;
@@ -35,14 +53,17 @@
 
       &::before {
         border-radius: 45%;
-        background-color: rgba(20, 20, 20, 1);
         animation: wave 5s linear infinite;
       }
 
       &::after {
         border-radius: 40%;
-        background-color: rgba(20, 20, 20, 0.5);
         animation: wave 10s linear infinite;
+      }
+
+      @include theme-colors($dark-theme: false);
+      html.dark & {
+        @include theme-colors($dark-theme: true);
       }
     }
   }

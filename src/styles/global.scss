@@ -2,7 +2,7 @@
 html,
 body,
 #__next {
-  @apply dark:bg-gray-900 bg-gray-400;
+  @apply dark:bg-gray-900 bg-white;
 }
 
 .input-cursor {
@@ -36,7 +36,7 @@ body,
 }
 
 .crystal-card {
-  @apply dark:bg-gray-900/75 border border-gray-700/75 rounded-2xl;
+  @apply dark:bg-gray-900/75 bg-white/75 border border-gray-900/75 dark:border-gray-400/75 rounded-2xl;
 }
 
 .navbar-menu-btn {
