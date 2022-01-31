@@ -19,7 +19,6 @@ import {
   SiJavascript,
   SiJquery,
   SiManjaro,
-  SiMongodb,
   SiNeovim,
   SiNextdotjs,
   SiPhp,
@@ -48,7 +47,7 @@ const Badges = ({ activeBages }: Props) => {
           variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
-          className="flex justify-center scale-75 xl:scale-100"
+          className="flex justify-center scale-50 md:scale-75 lg:scale-100"
         >
           <Badge
             icon={<SiDotnet className="text-5xl" />}
@@ -75,12 +74,12 @@ const Badges = ({ activeBages }: Props) => {
             power={"almost"}
             Id={"b_Blazor"}
           />
-          <Badge
+          {/* <Badge
             icon={<SiMongodb className="text-5xl" />}
             color="green"
             power={"half"}
             Id={"b_Mongo"}
-          />
+          /> */}
           <Badge
             icon={<FaDocker className="text-5xl" />}
             color="sky"

@@ -10,7 +10,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <div className="h-full">
+      <div className="h-full w-full">
         <div className="flex flex-col items-stretch min-h-screen">
           <Navbar />
           <Ghibli />
