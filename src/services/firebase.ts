@@ -1,3 +1,4 @@
+import IKeyPoint from "@/models/keypoint";
 import ILorem from "@/models/lorem";
 import IProject from "@/models/project";
 import ISkill from "@/models/skill";
@@ -25,3 +26,4 @@ const createCollection = <T = DocumentData>(collectionName: string) => {
 export const SkillsCol = createCollection<ISkill>("Skills");
 export const LoremsCol = createCollection<ILorem>("Lorems");
 export const ProjectsCol = createCollection<IProject>("Projects");
+export const KeyPointsCol = createCollection<IKeyPoint>("KeyPoints");

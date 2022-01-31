@@ -25,6 +25,7 @@ const MePage = () => {
       <Head>
         <title>Me</title>
       </Head>
+      {/* TypeWritter */}
       <div className="flex justify-center items-center">
         <h1
           ref={headerRef as RefObject<HTMLHeadingElement>}
