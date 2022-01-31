@@ -26,7 +26,7 @@ const HomePage = () => {
       <Head>
         <title>Home</title>
       </Head>
-      <div className="flex flex-col text-center p-2 sm:p-0 text-indigo-600 dark:text-white">
+      <div className="flex flex-col text-center p-2 sm:p-0 text-gray-900 dark:text-white">
         <Hero />
         <KeyPoints />
         <IndexSkills />

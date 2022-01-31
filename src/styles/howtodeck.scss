@@ -2,6 +2,22 @@
   --box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
 }
 
+@mixin ThemeGradient($dark-theme) {
+  @if $dark-theme {
+    background: linear-gradient(109.61deg, #2c2f45 4.26%, #202333 84.84%);
+  } @else {
+    background: linear-gradient(109.61deg, #e2e3e9 4.26%, #cccfe2 84.84%);
+  }
+}
+
+@mixin CardBg($dark-theme) {
+  @if $dark-theme {
+    background-color: #30344c;
+  } @else {
+    background-color: #cbccd4;
+  }
+}
+
 .deck {
   @apply max-w-sm md:max-w-lg;
 }
@@ -20,7 +36,10 @@
   top: -1.5em;
   left: 0em;
   border-radius: 8px;
-  background: linear-gradient(109.61deg, #2c2f45 4.26%, #202333 84.84%);
+  @include ThemeGradient($dark-theme: false);
+  html.dark & {
+    @include ThemeGradient($dark-theme: true);
+  }
 }
 @media (max-width: 550px) {
   .deck:before {
@@ -30,11 +49,14 @@
 
 .card {
   position: relative;
-  background-color: #30344c;
   padding: 1em;
   z-index: 5;
   border-radius: 2px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  @include CardBg($dark-theme: false);
+  html.dark & {
+    @include CardBg($dark-theme: true);
+  }
 }
 
 .card:first-of-type {

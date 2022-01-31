@@ -11,7 +11,7 @@ const BigSkillBage = ({ text, color, children }: Props) => {
   return (
     <div
       className={
-        (color ? color : "text-indigo-600 dark:text-gray-300") +
+        (color ? color : "text-gray-900 dark:text-gray-300") +
         " relative crystal-card p-4 flex justify-center"
       }
     >
