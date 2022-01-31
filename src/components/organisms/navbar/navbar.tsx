@@ -21,14 +21,14 @@ const Navbar = () => {
   return (
     <header className="flex-shrink-0 z-30 text-white">
       {/* Menu*/}
-      <nav className="px-4 flex justify-between bg-white dark:bg-gray-900">
+      <nav className="flex justify-between bg-white dark:bg-gray-900 h-12">
         <Link classname="text-3xl font-bold leading-none md:hidden" href="/">
           {" "}
         </Link>
         <div className="hidden md:flex md:mx-auto items-center">
           <NavBarListLinks />
         </div>
-        <div className="hidden md:flex">
+        <div className="hidden absolute right-0 md:flex">
           <DarkModeButton isDark={isDark} setIsDark={setIsDark} />
         </div>
         {/* Mobile Menu Button*/}

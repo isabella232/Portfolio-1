@@ -14,11 +14,11 @@ const HiddenMenu = ({ setIsHiddenMenuOpen, isDark, setIsDark }: Props) => {
     <div className="navbar-menu relative z-50">
       <div
         onClick={() => setIsHiddenMenuOpen(false)}
-        className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
+        className="navbar-backdrop fixed inset-0 bg-gray-800/25"
       ></div>
-      <nav className="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-blue-600 dark:bg-gray-800 border-r">
+      <nav className="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white dark:bg-gray-800 border-r">
         <div className="flex items-center mb-8">
-          <span className="mr-4 text-3xl font-bold leading-none text-white">
+          <span className="mr-4 text-3xl font-bold leading-none text-gray-900 dark:text-white">
             Menu
           </span>
           <span className="mr-auto text-lg">
@@ -55,7 +55,7 @@ const HiddenMenu = ({ setIsHiddenMenuOpen, isDark, setIsDark }: Props) => {
           </ul>
         </div>
         <div className="mt-auto">
-          <p className="my-4 text-center text-white">
+          <p className="my-4 text-center text-gray-900 dark:text-white">
             <span>Copyright © 2021</span>
           </p>
         </div>
