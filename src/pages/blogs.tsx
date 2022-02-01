@@ -25,8 +25,7 @@ const BlogsPage = ({
       variants={variants}
       initial={"hidden"}
       animate={"show"}
-      className="container mx-auto"
-    >
+      className="container mx-auto">
       <Head>
         <title>Blogs</title>
       </Head>

@@ -8,78 +8,91 @@ const ThemeSwitcher = () => {
     <div className="flex items-center">
       <button
         data-theme="indigo"
-        className={height + " " + width + " rounded-full bg-red-500 m-1"}
-      ></button>
+        className={
+          height + " " + width + " m-1 rounded-full bg-red-500"
+        }></button>
       <button
         data-theme="yellow"
-        className={height + " " + width + " rounded-full bg-orange-500 m-1"}
-      >
-        <span className="inline-flex justify-center items-center">
+        className={height + " " + width + " m-1 rounded-full bg-orange-500"}>
+        <span className="inline-flex items-center justify-center">
           {SVG.SmallCheck}
         </span>
       </button>
       <button
         data-theme="red"
-        className={height + " " + width + " rounded-full bg-amber-500 m-1"}
-      ></button>
+        className={
+          height + " " + width + " m-1 rounded-full bg-amber-500"
+        }></button>
       <button
         data-theme="purple"
-        className={height + " " + width + " rounded-full bg-yellow-500 m-1"}
-      ></button>
+        className={
+          height + " " + width + " m-1 rounded-full bg-yellow-500"
+        }></button>
       <button
         data-theme="pink"
-        className={height + " " + width + " rounded-full bg-lime-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-green-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-emerald-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-teal-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-cyan-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-sky-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-blue-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-indigo-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-violet-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-purple-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-fuchsia-500 m-1"}
-      ></button>
-      <button
-        data-theme="blue"
-        className={height + " " + width + " rounded-full bg-pink-500 m-1"}
-      ></button>
+        className={
+          height + " " + width + " m-1 rounded-full bg-lime-500"
+        }></button>
       <button
         data-theme="blue"
         className={
-          height + " " + width + " rounded-full bg-rose-500 m-1 is-active"
-        }
-      ></button>
+          height + " " + width + " m-1 rounded-full bg-green-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-emerald-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-teal-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-cyan-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-sky-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-blue-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-indigo-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-violet-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-purple-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-fuchsia-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " m-1 rounded-full bg-pink-500"
+        }></button>
+      <button
+        data-theme="blue"
+        className={
+          height + " " + width + " is-active m-1 rounded-full bg-rose-500"
+        }></button>
     </div>
   );
 };

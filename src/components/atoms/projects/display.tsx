@@ -16,7 +16,7 @@ const ProjectDisplay = ({ project, children }: Props) => {
     }
   }, []);
   return (
-    <div className="hidden sm:flex items-center justify-center p-6">
+    <div className="hidden items-center justify-center p-6 sm:flex">
       {children}
     </div>
   );

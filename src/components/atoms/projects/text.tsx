@@ -14,7 +14,7 @@ function ExtractDomain(source: string) {
 
 const ProjectText = ({ project }: Props) => {
   return (
-    <div className="p-7 -mt-4 text-gray-900 dark:text-white">
+    <div className="-mt-4 p-7 text-gray-900 dark:text-white">
       <p className="text-2xl font-bold">{project.title}</p>
       <div className="max-w-lg p-2">
         {project.description.split(". ").map((d) => {
@@ -29,22 +29,20 @@ const ProjectText = ({ project }: Props) => {
             return (
               <span
                 key={nanoid()}
-                className="p-2 font-semibold hover:text-indigo-500"
-              >
+                className="p-2 font-semibold hover:text-indigo-500">
                 <a href={source}>{domain}</a>
               </span>
             );
           })}
         </div>
       )}
-      <div className="py-4 max-w-lg">
+      <div className="max-w-lg py-4">
         <p className="font-semibold">Features : </p>
         {project.features.map((feature) => {
           return (
             <button
               key={nanoid()}
-              className="feature p-4 mt-4 ml-3 text-xs rounded-xl hover:scale-110"
-            >
+              className="feature mt-4 ml-3 rounded-xl p-4 text-xs hover:scale-110">
               {feature}
             </button>
           );

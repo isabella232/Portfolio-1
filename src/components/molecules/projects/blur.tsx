@@ -17,10 +17,9 @@ const Blur = ({ isBlurred, setIsBlurred, children }: Props) => {
         onClick={handleClick}
         className={
           isBlurred
-            ? "absolute py-2 px-4 flex justify-center bg-blue-600 hover:bg-blue-700 text-white transition ease-in duration-300 text-center shadow-md rounded-lg -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10"
+            ? "absolute top-1/2 left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 justify-center rounded-lg bg-blue-600 py-2 px-4 text-center text-white shadow-md transition duration-300 ease-in hover:bg-blue-700"
             : "hidden"
-        }
-      >
+        }>
         <a className="text-2xl">
           <FcStart />
         </a>{" "}

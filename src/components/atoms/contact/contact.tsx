@@ -16,9 +16,8 @@ const Contact = ({ icon, href, text }: Props) => {
   return (
     <motion.a
       variants={item}
-      className="flex flex-col items-center m-2 sm:m-0 text-indigo-600"
-      href={href}
-    >
+      className="m-2 flex flex-col items-center text-indigo-600 sm:m-0"
+      href={href}>
       <span className="text-lg font-bold">{text}</span>
       {icon}
     </motion.a>

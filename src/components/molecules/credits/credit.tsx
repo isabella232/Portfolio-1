@@ -10,46 +10,42 @@ const item: Variants = {
 
 const Credit = () => {
   return (
-    <div className="m-8 p-8 crystal-card">
-      <div className="flex flex-col items-center sm:flex-row text-8xl justify-evenly m-5 text-center">
+    <div className="crystal-card m-8 p-8">
+      <div className="m-5 flex flex-col items-center justify-evenly text-center text-8xl sm:flex-row">
         <div
-          className="text-cyan-600 p-2"
-          data-tippy-content="npx create-react-app"
-        >
+          className="p-2 text-cyan-600"
+          data-tippy-content="npx create-react-app">
           <a href="https://reactjs.org">
             <SiReact />
           </a>
-          <p className="text-sm font-bold text-gray-900 dark:text-white mt-2">
+          <p className="mt-2 text-sm font-bold text-gray-900 dark:text-white">
             React
           </p>
         </div>
         <div
-          className="text-black p-2"
-          data-tippy-content="npx create-next-app"
-        >
+          className="p-2 text-black"
+          data-tippy-content="npx create-next-app">
           <a href="https://nextjs.org">
             <SiNextdotjs />
           </a>
-          <p className="text-sm font-bold text-gray-900 dark:text-white mt-2">
+          <p className="mt-2 text-sm font-bold text-gray-900 dark:text-white">
             Next
           </p>
         </div>
         <div
-          className="text-yellow-400 p-2"
-          data-tippy-content="yarn add firebase"
-        >
+          className="p-2 text-yellow-400"
+          data-tippy-content="yarn add firebase">
           <a href="https://firebase.google.com">
             <SiFirebase />
           </a>
-          <p className="text-sm font-bold text-gray-900 dark:text-white mt-2">
+          <p className="mt-2 text-sm font-bold text-gray-900 dark:text-white">
             Firebase
           </p>
         </div>
       </div>
       <motion.span
         variants={item}
-        className="text-gray-900 dark:text-white text-2xl"
-      >
+        className="text-2xl text-gray-900 dark:text-white">
         Made with{" "}
         <span className="inline-block text-xl">
           <FaHeart />

@@ -41,14 +41,13 @@ const badgesContainer: Variants = {
 };
 const Badges = ({ activeBages }: Props) => {
   return (
-    <div className="h-40 max-h-max my-8">
+    <div className="my-8 h-40 max-h-max">
       {activeBages === "Dotnet" && (
         <motion.div
           variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
-          className="flex justify-center scale-50 md:scale-75 lg:scale-100"
-        >
+          className="flex scale-50 justify-center md:scale-75 lg:scale-100">
           <Badge
             icon={<SiDotnet className="text-5xl" />}
             color="violet"
@@ -93,8 +92,7 @@ const Badges = ({ activeBages }: Props) => {
           variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
-          className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
-        >
+          className="flex scale-50 items-center justify-center md:scale-75 lg:scale-100">
           <Badge
             icon={<SiJavascript className="text-5xl" />}
             color="yellow"
@@ -132,8 +130,7 @@ const Badges = ({ activeBages }: Props) => {
           variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
-          className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
-        >
+          className="flex scale-50 items-center justify-center md:scale-75 lg:scale-100">
           <Badge
             icon={<SiReact className="text-5xl" />}
             color="cyan"
@@ -159,8 +156,7 @@ const Badges = ({ activeBages }: Props) => {
           variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
-          className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
-        >
+          className="flex scale-50 items-center justify-center md:scale-75 lg:scale-100">
           <Badge
             icon={<SiHtml5 className="text-5xl" />}
             color="orange"
@@ -198,8 +194,7 @@ const Badges = ({ activeBages }: Props) => {
           variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
-          className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
-        >
+          className="flex scale-50 items-center justify-center md:scale-75 lg:scale-100">
           <Badge
             icon={<SiPython className="text-5xl" />}
             color="python"
@@ -237,8 +232,7 @@ const Badges = ({ activeBages }: Props) => {
           variants={badgesContainer}
           initial={"hidden"}
           animate={"show"}
-          className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100"
-        >
+          className="flex scale-50 items-center justify-center md:scale-75 lg:scale-100">
           <Badge
             icon={<SiNeovim className="text-5xl" />}
             color="neovim"

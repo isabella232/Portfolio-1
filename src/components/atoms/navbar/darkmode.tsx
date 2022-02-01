@@ -22,8 +22,7 @@ const DarkModeButton = ({ isDark, setIsDark }: Props) => {
     <motion.div
       className="toggleWrapper"
       animate={{ scale: 0.6 }}
-      transition={{ duration: 0 }}
-    >
+      transition={{ duration: 0 }}>
       <input
         type="checkbox"
         className="dn"

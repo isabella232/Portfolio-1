@@ -21,7 +21,7 @@ const Skills = ({ setActiveBadges }: Props) => {
     <>
       {isLoading && <Loader />}
       {!isLoading && (
-        <div className="flex flex-col sm:flex-row flex-wrap justify-around">
+        <div className="flex flex-col flex-wrap justify-around sm:flex-row">
           {skills
             .sort((a, b) => a.Id - b.Id)
             .map((skill) => {
@@ -30,8 +30,7 @@ const Skills = ({ setActiveBadges }: Props) => {
                   setActiveSkill={setActiveBadges}
                   key={skill.Id}
                   Id={skill.element_Id}
-                  text={skill.text}
-                >
+                  text={skill.text}>
                   {skill.details.map((detail, index) => {
                     return <SmallSkillBadge key={index} text={detail} />;
                   })}

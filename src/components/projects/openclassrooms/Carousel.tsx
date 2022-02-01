@@ -9,17 +9,16 @@ const Carousel = () => {
     event.preventDefault();
   };
   return (
-    <div className="border border-gray-700 rounded-xl max-w-xs md:max-w-xl">
+    <div className="max-w-xs rounded-xl border border-gray-700 md:max-w-xl">
       <Flicking align="prev" circular={true} autoResize={true}>
         {OC_ImagesData.map((image) => (
           <div
-            className="panel p-4 rounded-xl flex items-center"
-            key={nanoid()}
-          >
+            className="panel flex items-center rounded-xl p-4"
+            key={nanoid()}>
             <img
               src={image.src}
               onMouseDown={handClick}
-              className="w-full h-auto max-w-sm rounded-xl"
+              className="h-auto w-full max-w-sm rounded-xl"
             />
           </div>
         ))}

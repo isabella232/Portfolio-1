@@ -11,21 +11,21 @@ type Props = {
 const setIcon = (icon: string) => {
   switch (icon) {
     case "GoDesktopDownload":
-      return <GoDesktopDownload className="w-7 h-7 text-white" />;
+      return <GoDesktopDownload className="h-7 w-7 text-white" />;
     case "CgWebsite":
-      return <CgWebsite className="w-7 h-7 text-white" />;
+      return <CgWebsite className="h-7 w-7 text-white" />;
     case "VscDeviceMobile":
-      return <VscDeviceMobile className="w-7 h-7 text-white" />;
+      return <VscDeviceMobile className="h-7 w-7 text-white" />;
   }
 };
 const KeyPoint = ({ icon, title, text }: Props) => {
   return (
-    <div className="p-5 duration-300 transform crystal-card shadow-sm hover:-translate-y-2">
-      <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-500">
+    <div className="crystal-card transform p-5 shadow-sm duration-300 hover:-translate-y-2">
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-500">
         {setIcon(icon)}
       </div>
       <h6 className="mb-2 font-semibold">{title}</h6>
-      <p className="text-sm p-4 w-64 h-32">{text}</p>
+      <p className="h-32 w-64 p-4 text-sm">{text}</p>
     </div>
   );
 };

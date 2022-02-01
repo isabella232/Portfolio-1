@@ -21,12 +21,11 @@ const HomePage = () => {
       initial={"hidden"}
       animate={"show"}
       exit={"exit"}
-      className="container py-10 mx-auto"
-    >
+      className="container mx-auto py-10">
       <Head>
         <title>Home</title>
       </Head>
-      <div className="flex flex-col text-center p-2 sm:p-0 text-gray-900 dark:text-white">
+      <div className="flex flex-col p-2 text-center text-gray-900 dark:text-white sm:p-0">
         <Hero />
         <KeyPoints />
         <IndexSkills />

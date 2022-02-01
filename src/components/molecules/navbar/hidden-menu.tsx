@@ -14,10 +14,9 @@ const HiddenMenu = ({ setIsHiddenMenuOpen, isDark, setIsDark }: Props) => {
     <div className="navbar-menu relative z-50">
       <div
         onClick={() => setIsHiddenMenuOpen(false)}
-        className="navbar-backdrop fixed inset-0 bg-gray-800/25"
-      ></div>
-      <nav className="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white dark:bg-gray-800 border-r">
-        <div className="flex items-center mb-8">
+        className="navbar-backdrop fixed inset-0 bg-gray-800/25"></div>
+      <nav className="fixed top-0 right-0 bottom-0 flex w-5/6 max-w-sm flex-col border-r bg-white py-6 px-6 dark:bg-gray-800">
+        <div className="mb-8 flex items-center">
           <span className="mr-4 text-3xl font-bold leading-none text-gray-900 dark:text-white">
             Menu
           </span>
@@ -26,18 +25,16 @@ const HiddenMenu = ({ setIsHiddenMenuOpen, isDark, setIsDark }: Props) => {
           </span>
           <button onClick={() => setIsHiddenMenuOpen(false)}>
             <svg
-              className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+              className="h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-500"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
+              stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
+                d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>

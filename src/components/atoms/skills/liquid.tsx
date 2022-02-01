@@ -69,15 +69,13 @@ const Liquid = ({ power }: Props) => {
         variants={liquid}
         initial={"initial"}
         animate={waveF}
-        className="waveF"
-      ></motion.div>
+        className="waveF"></motion.div>
       <motion.div
         onAnimationComplete={handleAnimationComplete}
         variants={liquid}
         initial={"initial"}
         animate={waveB}
-        className="waveB"
-      ></motion.div>
+        className="waveB"></motion.div>
     </div>
   );
 };

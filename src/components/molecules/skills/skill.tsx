@@ -63,15 +63,14 @@ const Skill = ({ Id, text, children, isHowTo, setActiveSkill }: Props) => {
       id={Id}
       className={
         isHowTo
-          ? "p-2 w-full cursor-pointer skill"
-          : "p-2 w-full md:w-1/2  lg:w-1/3 cursor-pointer skill"
+          ? "skill w-full cursor-pointer p-2"
+          : "skill w-full cursor-pointer  p-2 md:w-1/2 lg:w-1/3"
       }
       onHoverStart={() => handleHStart()}
       onHoverEnd={() => handleHEnd()}
       onTap={() => {
         isBeingHovered ? handleHEnd() : handleHStart();
-      }}
-    >
+      }}>
       <BigSkillBadge color={isBeingHovered && color} text={text}>
         {isBeingHovered && <SkillDetailsCard>{children}</SkillDetailsCard>}
       </BigSkillBadge>

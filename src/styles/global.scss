@@ -39,11 +39,11 @@ body,
 }
 
 .crystal-card {
-  @apply dark:bg-gray-900/75 bg-white/75 border border-gray-900/75 dark:border-gray-400/75 rounded-2xl;
+  @apply rounded-2xl border border-gray-900/75 bg-white/75 dark:border-gray-400/75 dark:bg-gray-900/75;
 }
 
 .navbar-menu-btn {
-  @apply block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:text-white dark:hover:bg-gray-600 rounded;
+  @apply block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-gray-600 dark:hover:text-white;
 }
 
 .lorem {

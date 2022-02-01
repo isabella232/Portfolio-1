@@ -11,10 +11,10 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <div className="h-full w-full">
-        <div className="flex flex-col items-stretch min-h-screen">
+        <div className="flex min-h-screen flex-col items-stretch">
           <Navbar />
           <Ghibli />
-          <main className="flex-shrink-0 flex-grow z-20">{children}</main>
+          <main className="z-20 flex-shrink-0 flex-grow">{children}</main>
           <Footer />
         </div>
       </div>

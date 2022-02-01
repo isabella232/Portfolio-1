@@ -21,34 +21,36 @@ const setIcon = (icon: string) => {
     case "DiDotnet":
       return (
         <div
-          className={"text-5xl sm:text-7xl text-violet-700 hover:text-blue-600"}
-        >
+          className={
+            "text-5xl text-violet-700 hover:text-blue-600 sm:text-7xl"
+          }>
           <DiDotnet />
         </div>
       );
     case "SiDotnet":
       return (
         <div
-          className={"text-5xl sm:text-7xl text-violet-700 hover:text-blue-600"}
-        >
+          className={
+            "text-5xl text-violet-700 hover:text-blue-600 sm:text-7xl"
+          }>
           <SiDotnet />
         </div>
       );
     case "SiCsharp":
       return (
-        <div className={"text-5xl sm:text-7xl text-violet-600"}>
+        <div className={"text-5xl text-violet-600 sm:text-7xl"}>
           <SiCsharp />
         </div>
       );
     case "SiElectron":
       return (
-        <div className={"text-5xl sm:text-7xl text-teal-500"}>
+        <div className={"text-5xl text-teal-500 sm:text-7xl"}>
           <SiElectron />
         </div>
       );
     case "SiCplusplus":
       return (
-        <div className={"text-5xl sm:text-7xl text-blue-600"}>
+        <div className={"text-5xl text-blue-600 sm:text-7xl"}>
           <SiCplusplus />
         </div>
       );
@@ -73,10 +75,9 @@ const BigIcon = ({ icon, isRight }: Props) => {
       whileTap="hover"
       variants={variants}
       className={
-        "sm:w-32 sm:h-32 h-20 w-20 inline-flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 flex-shrink-0 " +
+        "inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 sm:h-32 sm:w-32 " +
         (isRight ? rightClasses : leftClass)
-      }
-    >
+      }>
       {iconNode}
     </motion.div>
   );

@@ -10,11 +10,10 @@ export type ThankProps = {
 };
 const Thanks = ({ source, link }: ThankProps) => {
   return (
-    <p className="text-xl m-5">
+    <p className="m-5 text-xl">
       <a
         className="hover:cursor-pointer hover:text-indigo-500"
-        href={source.href}
-      >
+        href={source.href}>
         {source.text}
       </a>
       {link && (
@@ -22,8 +21,7 @@ const Thanks = ({ source, link }: ThankProps) => {
           {" ( "}
           <a
             className="hover:cursor-pointer hover:text-blue-700"
-            href={link.href}
-          >
+            href={link.href}>
             {link.text}
           </a>
           {" )"}

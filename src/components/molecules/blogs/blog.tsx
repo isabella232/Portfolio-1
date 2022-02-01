@@ -7,17 +7,17 @@ const Blog = ({ frontmatter, slug }: Post) => {
   let tags: String | undefined = frontmatter.tags;
   let array: string[] | undefined = tags?.split(",");
   return (
-    <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-70 cursor-pointer m-5">
+    <div className="h-90 md:w-70 m-5 w-60 cursor-pointer overflow-hidden rounded-lg shadow-lg">
       <Link href={`/blog/${slug}`}>
         <a>
           <img alt="blog photo" className="max-h-40 w-full object-cover" />
         </a>
       </Link>
-      <div className="bg-white dark:bg-gray-800 w-full p-4">
-        <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
+      <div className="w-full bg-white p-4 dark:bg-gray-800">
+        <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
           {frontmatter.title}
         </p>
-        <p className="text-gray-400 dark:text-gray-300 font-light text-md">
+        <p className="text-md font-light text-gray-400 dark:text-gray-300">
           {frontmatter.description}
         </p>
         <motion.div
@@ -29,11 +29,10 @@ const Blog = ({ frontmatter, slug }: Post) => {
             left: -50,
             right: 50,
           }}
-          className="flex justify-starts items-center mt-4"
-        >
+          className="justify-starts mt-4 flex items-center">
           {array?.map((tag) => {
             return (
-              <div className="text-xs m-2 py-1.5 px-4 text-gray-600 bg-blue-100 rounded-2xl">
+              <div className="m-2 rounded-2xl bg-blue-100 py-1.5 px-4 text-xs text-gray-600">
                 {tag}
               </div>
             );

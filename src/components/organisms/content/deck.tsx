@@ -12,23 +12,21 @@ const Deck = ({ children }: Props) => {
   return (
     <>
       <p className="text-center">
-        <ImArrowDownRight2 className="h-7 w-7 inline-block" />
+        <ImArrowDownRight2 className="inline-block h-7 w-7" />
         <a
-          className="text-xl font-semibold text-gray-900 dark:text-white hover:text-indigo-500
+          className="text-xl font-semibold text-gray-900 hover:text-indigo-500 dark:text-white
           "
-          href="https://codepen.io/laijoann/pen/yLeKmVK"
-        >
+          href="https://codepen.io/laijoann/pen/yLeKmVK">
           <span> ( Codepen.io ) </span>
         </a>
-        <ImArrowDownLeft2 className="h-7 w-7 inline-block" />
+        <ImArrowDownLeft2 className="inline-block h-7 w-7" />
       </p>
       <div className="m-2">
         <motion.div
           variants={container}
           initial={"hidden"}
           animate={"show"}
-          className="deck"
-        >
+          className="deck">
           {children}
         </motion.div>
       </div>

@@ -26,11 +26,10 @@ const MePage = () => {
         <title>Me</title>
       </Head>
       {/* TypeWritter */}
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         <h1
           ref={headerRef as RefObject<HTMLHeadingElement>}
-          className="md:text-5xl text-4xl font-semibold text-center text-gray-900 dark:text-white my-10"
-        >
+          className="my-10 text-center text-4xl font-semibold text-gray-900 dark:text-white md:text-5xl">
           {"I'm "}
         </h1>
         {/* <span className="input-cursor w-0.5 h-10 bg-white ml-2"></span> */}

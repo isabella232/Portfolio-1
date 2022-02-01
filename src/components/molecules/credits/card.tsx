@@ -33,8 +33,7 @@ const Card = ({ header, children, Id }: Props) => {
       initial={"hidden"}
       animate={"show"}
       whileHover={"hover"}
-      className="card mb-8"
-    >
+      className="card mb-8">
       <header>{header}</header>
       <div className="cardBody">{children}</div>
     </motion.div>

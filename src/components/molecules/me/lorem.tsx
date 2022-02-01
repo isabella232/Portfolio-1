@@ -24,8 +24,7 @@ const Lorem = ({ Id, h2, p, icon }: Props) => {
         <p
           id={"lorem-" + Id + "-" + index}
           key={nanoid()}
-          className="leading-relaxed text-gray-600 dark:text-gray-400"
-        >
+          className="leading-relaxed text-gray-600 dark:text-gray-400">
           {p}
         </p>
       );

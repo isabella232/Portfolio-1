@@ -52,56 +52,56 @@
 }
 
 .violet {
-  @apply text-violet-700 bg-violet-700;
+  @apply bg-violet-700 text-violet-700;
 }
 .violet_d {
-  @apply text-violet-900 bg-violet-900;
+  @apply bg-violet-900 text-violet-900;
 }
 .pink {
-  @apply text-pink-400 bg-pink-400;
+  @apply bg-pink-400 text-pink-400;
 }
 .cyan {
-  @apply text-cyan-500 bg-cyan-500;
+  @apply bg-cyan-500 text-cyan-500;
 }
 .sky {
-  @apply text-sky-500 bg-sky-500;
+  @apply bg-sky-500 text-sky-500;
 }
 .blue {
-  @apply text-blue-500 bg-blue-500;
+  @apply bg-blue-500 text-blue-500;
 }
 .green {
-  @apply text-green-600 bg-green-600;
+  @apply bg-green-600 text-green-600;
 }
 .nodejs {
-  @apply text-slate-600 bg-green-600;
+  @apply bg-green-600 text-slate-600;
 }
 .yellow {
-  @apply text-yellow-500 bg-yellow-500;
+  @apply bg-yellow-500 text-yellow-500;
 }
 .orange {
-  @apply text-orange-500 bg-orange-500;
+  @apply bg-orange-500 text-orange-500;
 }
 .electron {
-  @apply text-sky-500 bg-slate-700;
+  @apply bg-slate-700 text-sky-500;
 }
 .black {
-  @apply text-black bg-black;
+  @apply bg-black text-black;
 }
 .python {
-  @apply text-yellow-300 bg-blue-500;
+  @apply bg-blue-500 text-yellow-300;
 }
 .red {
-  @apply text-red-500 bg-red-500;
+  @apply bg-red-500 text-red-500;
 }
 .php {
-  @apply text-indigo-400 bg-indigo-400;
+  @apply bg-indigo-400 text-indigo-400;
 }
 .neovim {
-  @apply text-gray-500 bg-gradient-to-r from-green-500 to-blue-800;
+  @apply bg-gradient-to-r from-green-500 to-blue-800 text-gray-500;
 }
 .rider {
-  @apply text-black bg-gradient-to-r from-amber-500 via-pink-500 to-blue-600;
+  @apply bg-gradient-to-r from-amber-500 via-pink-500 to-blue-600 text-black;
 }
 .framer {
-  @apply text-black bg-gradient-to-r from-pink-500 to-indigo-500;
+  @apply bg-gradient-to-r from-pink-500 to-indigo-500 text-black;
 }

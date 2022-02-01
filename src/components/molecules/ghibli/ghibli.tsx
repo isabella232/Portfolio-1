@@ -52,9 +52,8 @@ const Ghibli = () => {
         <div
           className={
             (isRobot ? "robot " : "top-40 h-3/5 w-screen ") +
-            "hidden sm:flex ghibli fixed justify-center items-center space-x-48"
-          }
-        >
+            "ghibli fixed hidden items-center justify-center space-x-48 sm:flex"
+          }>
           {listOfGhiblis}
         </div>
       )}

@@ -16,7 +16,7 @@ const KeyPoints = () => {
     });
   }, []);
   return (
-    <div className="flex flex-col space-y-4 lg:flex-row justify-evenly lg:space-x-8 lg:space-y-0 items-center mb-8">
+    <div className="mb-8 flex flex-col items-center justify-evenly space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
       {isLoading && <Loader />}
       {!isLoading &&
         keypoints

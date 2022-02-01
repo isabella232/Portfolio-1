@@ -11,8 +11,7 @@ const NavBarLink = ({ Id, href, route, text }: Props) => {
       key={Id}
       onMouseEnter={() => setIsBeingHovered(true)}
       onMouseLeave={() => setIsBeingHovered(false)}
-      className="group hover:text-white px-3"
-    >
+      className="group px-3 hover:text-white">
       <Link
         href={href}
         classname={
@@ -22,8 +21,7 @@ const NavBarLink = ({ Id, href, route, text }: Props) => {
             : " text-gray-400 dark:text-indigo-500 ") +
           //*Anyway class
           "font-bold text-md group-hover:text-gray-900 dark:group-hover:text-white flex "
-        }
-      >
+        }>
         <span className="relative">
           {text}
           {isBeingHovered && <Underline />}

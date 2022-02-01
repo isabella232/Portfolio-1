@@ -6,16 +6,15 @@ type Props = {
 };
 const ProjectAbout = ({ project }: Props) => {
   return (
-    <div className="flex flex-col items-center justify-center p-2 group">
-      <p className="text-center font-semibold m-4 text-gray-900 dark:text-white group-hover:text-indigo-600 group-hover:scale-105 duration-300">
+    <div className="group flex flex-col items-center justify-center p-2">
+      <p className="m-4 text-center font-semibold text-gray-900 duration-300 group-hover:scale-105 group-hover:text-indigo-600 dark:text-white">
         Download / Clone :
       </p>
       <a
-        className="bg-black rounded-full w-min text-5xl p-4 cursor-pointer"
+        className="w-min cursor-pointer rounded-full bg-black p-4 text-5xl"
         href={project.link}
         target="_blank"
-        rel="noopener"
-      >
+        rel="noopener">
         <GoMarkGithub />
       </a>
     </div>

@@ -28,14 +28,13 @@ const Badge = ({ Id, icon, color, power }: Props) => {
       onMouseEnter={() => setIsBeingHovered(true)}
       onMouseLeave={() => setIsBeingHovered(power === "full" ? true : false)}
       exit={"exit"}
-      className="flex flex-col items-center mx-2"
-      id={Id}
-    >
+      className="mx-2 flex flex-col items-center"
+      id={Id}>
       <article className={"badge " + color}>
         <div className="badgeRounded">{icon}</div>
         {!isBeingHovered && <Liquid power={power} />}
       </article>
-      <span className="text-indigo-500 font-semibold">
+      <span className="font-semibold text-indigo-500">
         LVL :{" "}
         <span className="text-gray-900 dark:text-white">
           {power.toUpperCase()}
