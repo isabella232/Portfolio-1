@@ -17,8 +17,8 @@ const NavBarLink = ({ Id, href, route, text }: Props) => {
         classname={
           //*Is Current Page           True                        False
           (route === href
-            ? " text-indigo-400 dark:text-gray-500 "
-            : " text-gray-400 dark:text-indigo-500 ") +
+            ? " text-indigo-500 dark:text-gray-500 "
+            : " text-gray-500 dark:text-indigo-500 ") +
           //*Anyway class
           "font-bold text-md group-hover:text-gray-900 dark:group-hover:text-white flex "
         }>

@@ -16,27 +16,27 @@ const ProjectText = ({ project }: Props) => {
   return (
     <div className="-mt-4 p-7 text-gray-900 dark:text-white">
       <p className="text-2xl font-bold">{project.title}</p>
-      <div className="max-w-lg p-2">
+      <div className="p-2">
         {project.description.split(". ").map((d) => {
           return <p key={nanoid()}>{d}</p>;
         })}
       </div>
       {project.sources && (
-        <div className="flex">
-          <span className="p-2 font-semibold">Sources :</span>
+        <div className="flex max-w-lg flex-col md:flex-row">
+          <p className="p-2 font-semibold">Sources :</p>
           {project.sources.map((source) => {
             let domain = ExtractDomain(source);
             return (
-              <span
+              <p
                 key={nanoid()}
                 className="p-2 font-semibold hover:text-indigo-500">
                 <a href={source}>{domain}</a>
-              </span>
+              </p>
             );
           })}
         </div>
       )}
-      <div className="max-w-lg py-4">
+      <div className="py-4">
         <p className="font-semibold">Features : </p>
         {project.features.map((feature) => {
           return (

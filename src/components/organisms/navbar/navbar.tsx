@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <header className="z-30 flex-shrink-0 text-white">
       {/* Menu*/}
-      <nav className="flex h-12 justify-between bg-white dark:bg-gray-900">
+      <nav className="flex h-12 justify-between bg-gray-100 dark:bg-gray-900">
         <Link classname="text-3xl font-bold leading-none md:hidden" href="/">
           {" "}
         </Link>
