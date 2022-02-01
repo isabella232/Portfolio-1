@@ -5,10 +5,9 @@ type Props = {
   isDark: boolean;
   setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
 };
-
 const DarkModeButton = ({ isDark, setIsDark }: Props) => {
   const handClick = () => {
-    if (localStorage.theme === "light" || !("theme" in localStorage)) {
+    if (localStorage.theme === "light") {
       document.documentElement.classList.add("dark");
       localStorage.theme = "dark";
       setIsDark(true);

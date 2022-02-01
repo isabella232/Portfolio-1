@@ -34,6 +34,7 @@ const Footer = () => {
           <motion.a
             variants={variants}
             whileHover="hover"
+            href="https://github.com/H97-Git/Portfolio"
             className="ml-3 text-white dark:text-gray-400">
             <GoMarkGithub />
           </motion.a>

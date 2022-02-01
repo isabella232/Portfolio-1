@@ -20,6 +20,10 @@ function App({ Component, pageProps }: AppProps) {
   let rng = Math.floor(Math.random() * fonts.length);
   useEffect(() => {
     document.documentElement.style.fontFamily = fonts[rng];
+    if (!("themes" in localStorage)) {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+    }
   }, []);
   return (
     <Layout>

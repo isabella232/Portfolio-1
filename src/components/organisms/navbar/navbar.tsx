@@ -3,20 +3,11 @@ import { Link } from "@/components/atoms/shared/link-on-click";
 import HiddenMenu from "@/molecules/navbar/hidden-menu";
 import NavBarListLinks from "@/molecules/navbar/navbar-list-links";
 import { AnimatePresence } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [isHiddenMenuOpen, setIsHiddenMenuOpen] = useState(false);
-
-  useEffect(() => {
-    if (localStorage.theme === "dark") {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDark]);
 
   return (
     <header className="z-30 flex-shrink-0 text-white">
